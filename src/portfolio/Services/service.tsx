@@ -21,7 +21,7 @@ const Service=()=>{
                         animate={inView ? {x:0, opacity:1}:{}}
                         transition={{duration:2}} >
                         <div className="cotainer1a">
-                            <img src="../../../public/imageSlide/logoRe/ico/animate_5084222.png" alt="" />
+                            <img src="/imageSlide/logoRe/ico/animate_5084222.png" alt="" />
                             <h3>Web Développement Frontend Responsive</h3>
                         </div>
                         <div className="cotainer1">
@@ -39,7 +39,7 @@ const Service=()=>{
                         transition={{duration:2}}
                     >
                         <div className="cotainer1a">
-                            <img src="../../../public/imageSlide/logoRe/ico/coding_3867537.png" alt="" />
+                            <img src="/imageSlide/logoRe/ico/coding_3867537.png" alt="" />
                             <h3>Web developpement Backend & API</h3>
                         </div>
                         <div className="cotainer1">
@@ -57,7 +57,7 @@ const Service=()=>{
                         transition={{duration:2 }}
                     >
                         <div className="cotainer1a">
-                            <img src="../../../public/imageSlide/logoRe/ico/layer_10329552.png" alt="" />
+                            <img src="/imageSlide/logoRe/ico/layer_10329552.png" alt="" />
                             <h3>Web Développement Full Stack</h3>   
                         </div>
                         <div className="cotainer1">

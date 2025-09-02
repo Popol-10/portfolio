@@ -11,7 +11,7 @@ const phrases = [
 ];
 
 const Section1 = () => {
-  const img = "../../../imagePort/popol.jpg";
+  const img = "/imagePort/popol.jpg";
 
   // states pour le typewriter
   const [index, setIndex] = useState(0);       // index de la phrase actuelle

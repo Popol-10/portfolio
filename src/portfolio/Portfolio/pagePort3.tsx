@@ -19,7 +19,7 @@ const Port3=()=>{
                         <p>C'est la vitrine principale du site Mi-Produits.</p>
                     </div>
                     <div className="img">
-                        <img src="../../../imagePort/Capture d’écran 2025-09-01 154823.png" alt="" />
+                        <img src="/imagePort/Capture d’écran 2025-09-01 154823.png" alt="" />
                     </div>
 
                 </div>

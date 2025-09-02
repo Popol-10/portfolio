@@ -67,7 +67,7 @@ const Contact =()=>{
                             <div className="contlogo">
                                 <div className="phone">
                                     <div className="phone2">
-                                        <img src="../../../public/imageSlide/logoPhone/phone-call.png" alt="" />
+                                        <img src="/imageSlide/logoPhone/phone-call.png" alt="" />
                                     </div>
                                     <div className="mail">
                                         <h5>034 89 709 47</h5>  
@@ -76,7 +76,7 @@ const Contact =()=>{
                                 </div>
                                 <div className="phone">
                                     <div className="phone2">
-                                        <img src="../../../public/imageSlide/logoPhone/email.png" alt="" />
+                                        <img src="/imageSlide/logoPhone/email.png" alt="" />
 
                                     </div>
                                     <div className="mail">
@@ -91,7 +91,7 @@ const Contact =()=>{
                                     rel="noopener noreferrer"
                                     style={{textDecoration:"none"}}>
                                     <div className="phone2">
-                                        <img src="../../../public/imageSlide/logoPhone/whatsapp.png" alt="" />
+                                        <img src="/imageSlide/logoPhone/whatsapp.png" alt="" />
 
                                     </div>
                                     <div className="mail">
@@ -107,7 +107,7 @@ const Contact =()=>{
                                     style={{textDecoration:"none"}}>
 
                                     <div className="phone2">
-                                        <img src="../../../public/imageSlide/logoPhone/facebook.png" alt="" />
+                                        <img src="/imageSlide/logoPhone/facebook.png" alt="" />
                                     </div>
                                     <div className="mail">
                                         <h5>Patrick Razafindrainibe</h5>  

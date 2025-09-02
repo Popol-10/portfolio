@@ -19,7 +19,7 @@ const Port4=()=>{
                         <p>j'ai réalisé l'intégration web d'une maquette automobile en transformat un designe statique en un site fonctionnel et interactif.</p>
                     </div>
                     <div className="img">
-                        <img src="../../../imagePort/Capture d’écran 2025-09-01 150243.png" alt="" />
+                        <img src="/imagePort/Capture d’écran 2025-09-01 150243.png" alt="" />
                     </div>
                 </div>
                 <div id="apropo">

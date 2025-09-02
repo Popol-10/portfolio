@@ -25,7 +25,7 @@ const Port1=()=>{
                         <p>Une application web qui contient touts mes information : expériences, compétence...</p>
                     </motion.div>
                     <div className="img">
-                        <img src="../../../imagePort/Capture d’écran 2025-09-02 081543.png" alt="" />
+                        <img src="/imagePort/Capture d’écran 2025-09-02 081543.png" alt="" />
                     </div>
                 </div>
                 <div id="apropo">

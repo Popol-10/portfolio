@@ -19,7 +19,7 @@ const Port2=()=>{
                         <p>Une plateforme dédiée à la valorisation et à la vente de produits locaux à Madagasikara</p>
                     </div>
                     <div className="img">
-                        <img src="../../../imagePort/Capture d’écran 2025-09-01 152056.png" alt="" />
+                        <img src="/imagePort/Capture d’écran 2025-09-01 152056.png" alt="" />
                     </div>
 
                 </div>
