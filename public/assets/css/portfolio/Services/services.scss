@@ -180,39 +180,7 @@
   }
 }
 
-/* Animations inchangées */
-@keyframes rotateChange {
-  0% {
-    transform: rotateY(0deg);
-    background: #0000009d;
-  }
-  50% {
-    transform: rotateY(180deg);
-    background: url("../../../../imageSlide/grunge-interior-design-with-spotlight-shining-down.jpg")
-      center/cover no-repeat;
-  }
-  100% {
-    transform: rotateY(360deg);
-    background: #0000009d;
-  }
-}
 
-@keyframes fadeText {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
-@keyframes transX {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+
 

@@ -3,7 +3,7 @@
 
 #Contact{
     @include size($wd:100vw,$ht:32vw);
-    @include bgImage($img:"../../../../imageSlide/Layer\ 4.png");
+    @include bgImage($img:"/imageSlide/Layer\ 4.png");
     background-attachment: fixed;
     .contactd{
         @include size($wd:100vw,$ht:32vw);

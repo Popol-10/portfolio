@@ -3,7 +3,7 @@
 
 
 #detailPort{
-    @include bgImage($img:"../../../../../public/imageSlide/Screenshot_20240609_121909.jpg");
+    @include bgImage($img:"/imageSlide/Screenshot_20240609_121909.jpg");
     @include size($wd:100vw,$ht:90vw);
     padding-top: 4vw;
 

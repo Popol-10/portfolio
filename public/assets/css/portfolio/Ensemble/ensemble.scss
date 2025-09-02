@@ -6,7 +6,7 @@
     width: 100vw;
     height: auto;
     overflow-x: hidden;
-    @include bgImage($img:"../../../../../public/imageSlide/Screenshot_20240609_121909.jpg");
+    @include bgImage($img:"/imageSlide/Screenshot_20240609_121909.jpg");
     overflow-y:hidden ;
     footer{
         width: 100vw;
