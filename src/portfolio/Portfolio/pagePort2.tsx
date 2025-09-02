@@ -11,7 +11,10 @@ const Port2=()=>{
             <div id="detailPort">
                 <div className="detailPort">
                     <div className="text1">
-                        <Link to={"/"} > sortir</Link>
+                        <Link to={"/"} > <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                            </svg>
+                        </Link>
                         <h2>Mi-Produits</h2>
                         <p>Une plateforme dédiée à la valorisation et à la vente de produits locaux à Madagasikara</p>
                     </div>

@@ -20,7 +20,7 @@ const {ref, inView} = useInView({
                         animate={inView ? {x:0, y:0, opacity:1}:{}}
                         transition={{duration:2}}
                         >
-                        <img src="../../../imagePort/Capture d’écran 2025-09-01 152953.png" alt="" />
+                        <img src="../../../imagePort/Capture d’écran 2025-09-02 081543.png" alt="" />
                         <h3>Portfolio</h3>
                         <p>Une application web qui contient touts mes information : experiences, competence...</p>
                         <div className="port1a">
