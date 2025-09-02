@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
 
-import "../../../public/assets/css/portfolio/HeaderP/headerP.scss";
+import "../../assets/css/portfolio/HeaderP/headerP.scss";
 
 const Header = () => {
   const [open, setOpen] = useState(false);

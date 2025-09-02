@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import "../../../public/assets/css/portfolio/Portfolio/port1.scss"
+import "../../assets/css/portfolio/Portfolio/port1.scss"
 // import "../../../imagePort/Capture d’écran 2025-09-01 145041.png"
 // import Header from "../header/header"
 import Header2 from "../header/head2"

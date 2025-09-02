@@ -1,5 +1,6 @@
 import { useInView } from "react-intersection-observer";
-import "../../../public/assets/css/portfolio/Section2/section2.scss";
+// import "assets/css/portfolio/Section2/section2.scss";
+import "../../assets/css/portfolio/Section2/section2.scss";
 import {motion} from "framer-motion"
 // import "../../../public/imageSlide/logoCompet/html-5_5968267.png"
 
@@ -15,11 +16,11 @@ const Section2 =()=>{
         <>
             <section id="section2" ref={ref}>
                 <h2>MES COMPETENCES</h2>
-                <div 
+                <motion.div 
                     id="contenaire-Compet"
-                    // initial={{y:100,opacity:0}}
-                    // animate={inView ? {y:0 , opacity:1} : {}}
-                    // transition={{duration:3}}
+                    initial={{y:100,opacity:0}}
+                    animate={inView ? {y:0 , opacity:1} : {}}
+                    transition={{duration:3}}
                     >
                     <div className="boiteComp">
                         <div className="imagIco">
@@ -110,7 +111,7 @@ const Section2 =()=>{
                         </div>
                         
                     </div>
-                </div>
+                </motion.div>
             </section>
 
         </>

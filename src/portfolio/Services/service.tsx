@@ -1,5 +1,5 @@
 import { Link } from "react-scroll"
-import "../../../public/assets/css/portfolio/Services/services.scss"
+import "../../assets/css/portfolio/Services/services.scss"
 import {motion} from "framer-motion"
 import {useInView} from "react-intersection-observer"
 const Service=()=>{

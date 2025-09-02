@@ -3,7 +3,7 @@
 import { useState } from "react";
 // import { Link } from "react-scroll";
 
-import "../../../public/assets/css/portfolio/HeaderP/headerP.scss";
+import "../../assets/css/portfolio/HeaderP/headerP.scss";
 import { Link } from "react-router-dom";
 
 const Header2 = () => {

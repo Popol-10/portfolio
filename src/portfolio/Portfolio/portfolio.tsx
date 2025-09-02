@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import {motion} from "framer-motion"
-import "../../../public/assets/css/portfolio/Portfolio/portfolio.scss"
+import "../../assets/css/portfolio/Portfolio/portfolio.scss"
 // import "../../../imagePort/Capture d’écran 2025-09-01 150243.png"
 import { useInView } from "react-intersection-observer";
 

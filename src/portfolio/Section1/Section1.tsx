@@ -1,7 +1,7 @@
 
 
 import { useEffect, useState } from "react";
-import "../../../public/assets/css/portfolio/Section1/section1.scss";
+import "../../assets/css/portfolio/Section1/section1.scss";
 // import "../../../imagePort/popol.jpg";
 import { motion } from "framer-motion";
 const phrases = [
