@@ -1,5 +1,5 @@
 @import "../../library/layout/layout.scss";
-@include Police();
+
 #portfolio{
     @include size($wd:100vw,$ht:66vw);
     // margin: 0;
