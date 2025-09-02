@@ -15,11 +15,11 @@ const Section2 =()=>{
         <>
             <section id="section2" ref={ref}>
                 <h2>MES COMPETENCES</h2>
-                <motion.div 
+                <div 
                     id="contenaire-Compet"
-                    initial={{y:100,opacity:0}}
-                    animate={inView ? {y:0 , opacity:1} : {}}
-                    transition={{duration:3}}
+                    // initial={{y:100,opacity:0}}
+                    // animate={inView ? {y:0 , opacity:1} : {}}
+                    // transition={{duration:3}}
                     >
                     <div className="boiteComp">
                         <div className="imagIco">
@@ -110,7 +110,7 @@ const Section2 =()=>{
                         </div>
                         
                     </div>
-                </motion.div>
+                </div>
             </section>
 
         </>
