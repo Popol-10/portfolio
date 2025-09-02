@@ -1,0 +1,11 @@
+@import "../library/layout/layout.scss";
+
+@include Police();
+
+#homePage{
+    @include section();
+    @include flexColumn($gp:1.5vw);
+    overflow: auto;
+    padding: 0.5vw 2vw 2vw 2vw;
+
+}

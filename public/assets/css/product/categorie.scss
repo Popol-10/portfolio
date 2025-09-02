@@ -1,0 +1,102 @@
+@import "../library/layout/layout.scss";
+
+@include Police();
+
+.cardCategorie{
+    @include size($wd:32.4%, $ht:auto);
+    @include flexColumn($gp:1.5vw);
+    background-color: #fff;
+    border-radius: 1vw;
+    padding: 2vw;
+
+    #headCard{
+        @include size($ht:auto);
+        @include flex($jc:start);
+
+        #nomCat{
+            @include size($ht:auto, $wd:auto);
+            @include flex($jc:start);
+
+            #nom{
+                font-size: 1.2vw;
+                font-family: "SemiBold";
+                font-weight: 500;
+                color: #121212;
+            }
+        }
+    }
+
+    #bodyCard{
+        @include size($ht:auto);
+        @include flexColumn($gp:1vw);
+
+        .infosCat{
+            @include size($ht:auto);
+            @include flex($jc:start, $gp:0.5vw);
+            
+            #contentIcone{
+                @include size($wd:auto, $ht:auto);
+                @include flex();
+                
+            }
+
+            .text{
+                font-size: 1.1vw;
+                font-family: "medium";
+                color: $gris5;
+            }
+            .nom{
+                @include size($ht:auto);
+                @include flex($jc:start, $gp:0.5vw);
+                color: #303030;
+
+                #nbr{
+                    font-family: "SemiBold";
+                }
+                #pieces{
+                    color: $gris4;
+                    font-family: "medium";
+                }
+            }
+            .prix{
+                @include size($ht:auto);
+                @include flex($jc:start, $gp:0.5vw);
+
+                #min, #max{
+                    font-family: "SemiBold";
+                    color: #303030;
+
+                }
+                #max{
+                    color: $loko3;
+                }
+            }
+        }
+    }
+
+    #footCard{
+        @include size($ht:auto);
+        @include flex($jc:start, $gp:0.5vw);
+        @include border($ps:top, $col:$gris);
+        padding-top: 1.5vw;
+        
+        .btn{
+            @include button($bg:#fff, $pd:1vw);
+            @include border($col:$lavande, $brad:0.5vw);
+            @include size($ht:3vw, $wd:auto);
+
+            &:hover{
+                background-color: $gris;
+            }
+
+            .icone{
+                color: #121212;
+                width: 1.5vw;
+            }
+            .trash{
+                color: $rougeCorail;
+            }
+        }
+    }
+
+}

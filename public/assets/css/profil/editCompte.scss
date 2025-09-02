@@ -1,0 +1,209 @@
+@import "../library/layout/layout.scss";
+
+@include Police();
+
+$violet: #8E44AD;
+
+.modalEditCompte{
+    @include size();
+    @include position($ps:fixed);
+    @include flex($al:start);
+    position: fixed;
+    z-index: 20;
+    visibility: hidden;
+    transition: visibility 0.3s;
+    .overlay{
+        @include size();
+        position: absolute;
+        background-color: #333333d3;
+        z-index: -1;
+        opacity: 0;
+        transition: all 0.3s 0.2s ease-out;
+    }
+    .modal{
+        @include modal($wd:32%);
+        position: relative;
+        margin-top: 4vw;
+        padding: 2.1vw;
+        border-radius: 1.2vw;
+        opacity: 0;
+        visibility: hidden;
+        transition:all 0.4s ease-out;
+        transform: translateY(-4vw);
+
+        #headModal{
+            @include size($ht:auto);
+            @include flex($jc:space-between);
+            @include border($ps:bottom, $col:$gris2);
+            padding-bottom: 1vw;
+
+            #contentTitre{
+                @include size($ht:auto);
+                @include flex($jc:space-between);
+                #titre{
+                    font-size: 1.2vw;
+                    font-family: "SemiBold";
+                    font-weight: 500;
+                    color: #303030;
+                }
+                .btnClose{
+                    @include button($bg:$gris, $brad:50%);
+                    @include size($wd:2.5vw, $ht:2.5vw);
+                    .icone{
+                        font-size: 1.3vw;
+                        color: $rougeCorail;
+                    }
+                    &:hover{
+                        background-color: $gris2;
+                    }
+                }
+            }
+        }
+        #bodyModal{
+            @include size($ht:auto);
+            @include flexColumn($gp:1vw, $al:center, $jc:center);
+            padding:1.5vw 0;
+
+            #formGroup{
+                @include size($ht:auto);
+                @include flexColumn($gp:0.5vw);
+                position: relative;
+
+                label{
+                    font-size: 1vw;
+                    color: #303030;
+                }
+
+                #contentInput{
+                    @include size($ht:3.8vw);
+                    @include flex($jc:space-between);
+                    border-radius: 0.5vw;
+                    background-color: $gris;
+
+                    #contentIcone{
+                        @include size($wd:15%);
+                        @include flex();
+                    }
+
+                    input{
+                        @include input($wd:88%);
+                        background-color: transparent;
+                        border: none;
+                        color: #303030;
+                        padding: 1vw;
+                        padding-left: 0;
+                    }
+
+                    #unite{
+                        @include size($wd:12%);
+                        @include flex();
+                        color: $gris5;
+                    }
+                }
+
+                textarea{
+                    @include input($ht:10vw);
+                    background-color: $gris;
+                    border: none;
+                    padding: 1vw;
+                    font-size: 1vw;
+                    resize: none;
+                }
+
+                .contenu {
+                    @include size($ht:auto);
+                    @include position($ps: absolute, $top: 6vw, $rgt:0);
+                    box-shadow: 0 0 5px $shadow2;
+                    background-color: #fff;
+                    border-radius: 0.5vw;
+                    transition: all 0.2s linear;
+                    visibility: hidden;
+                    opacity: 0;
+                    transform: translateY(0.8vw);
+                    padding: 0.5vw;
+                    z-index: 20;
+                    #content-liste {
+                        @include size();
+                        @include flexColumn();
+                        max-height: 20vw;
+                        padding: 0.5vw;
+                        overflow: auto;
+        
+                        .liste {
+                            @include size($ht: auto);
+                            @include flex($jc: start, $gp: 1vw);
+                            @include border($ps: bottom, $col: $gris);
+                            cursor: pointer;
+                            padding: 0.8vw 1vw;
+                            border-radius: 0.5vw;
+                            #image {
+                                @include size($wd: 3vw, $ht: 3vw);
+                                img {
+                                    @include img();
+                                }
+                            }
+                            #infos {
+                                @include size($wd: auto);
+                                @include flexColumn($gp: 0.2vw);
+                                #nom {
+                                    font-size: 0.9vw;
+                                    font-weight: 500;
+                                    font-family: "medium";
+                                    color: #303030;
+                                }
+                                #age {
+                                    font-weight: 500;
+                                    font-size: 11px;
+                                    color: #687d9c;
+                                }
+                            }
+                            &:hover {
+                                background-color: $gris;
+                            }
+                        }
+                    }
+                }
+                .contenu.active {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translate(0);
+                    transition: all 0.2s linear;
+                }
+            }
+                
+        }
+        #footModal{
+            @include size($ht:auto);
+            @include flex($gp:0.5vw);
+            padding-top: 0.5vw;
+
+            .btn{
+                @include button($bg:$violet, $pd:1.4vw 3vw, $brad:0.6vw, $col:#303030);
+                @include size($ht:auto);
+                gap: 0.5vw;
+                text-decoration: none;
+            }
+
+            .btnCancel{
+                background-color: $gris;
+                color: #303030;
+            }
+
+            .btnConfirm{
+                background-color: $violet;
+                color: #fff;
+            }
+        }
+    }
+}
+.modalEditCompte.active .overlay{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.4s;
+}
+.modalEditCompte.active .modal{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.4s;
+    transform: translate(0);
+}

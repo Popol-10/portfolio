@@ -1,0 +1,62 @@
+@import "../library/layout/layout.scss";
+$shadow : 0 1px 5px $shadow1;
+
+@include Police();
+
+.pagination-container{
+    @include size($ht:auto);
+    @include flex($gp:0.5vw, $jc:end);
+    padding: 0.6vw 0;
+
+    .pagination-previous, .pagination-next{
+        @include size($wd:2.5vw, $ht:2.5vw);
+        @include button($col:#30303030);
+        @include flex();
+        border-radius: 50%;
+        background-color: #fff;
+        position: relative;
+
+        a {
+            @include size();
+            @include flex();
+        }
+    }
+
+    .pagination-previous:hover, .pagination-next:hover {
+        background-color: #2c786546;
+        color: #fff;
+    }
+      
+    .disabled-page {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    .pagination-page{
+        @include size($wd:2.5vw, $ht:2.5vw);
+        @include button($pd:0);
+        @include flex();
+        border-radius: 50%;
+        background-color: #fff;
+        font-size: 1vw;
+        font-family: "medium";
+        font-weight: 500;
+        color: #121212;
+        position: relative;
+
+        a {
+            @include size();
+            @include flex();
+        }
+    }
+
+    .active-page{
+        background-color: $violet;
+        color: #fff;
+    }
+
+    .label{
+        list-style-type: none;
+    }
+}
+

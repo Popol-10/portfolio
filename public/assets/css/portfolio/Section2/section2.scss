@@ -1,0 +1,231 @@
+
+@import "../../library/layout/layout.scss";
+@include Police();
+
+#section2 {
+  @include size($wd: 100vw, $ht: auto);
+  padding: 1.5vw;
+
+  h2 {
+    width: 100%;
+    font-size: 2.2vw;
+    text-align: center;
+    margin-bottom: 1vw;
+    color: rgb(133, 75, 75);
+  }
+
+  #contenaire-Compet {
+    @include size($wd: 70vw, $ht: auto);
+    background: linear-gradient(to bottom,rgba(255, 0, 0, 0.158),rgba(0, 0, 0, 0.26));
+    margin: 2vw auto;
+    border-radius: 2vw;
+    @include flexColumn($jc: space-around);
+    .boiteComp {
+      width: 60vw;
+      height: auto;
+      min-height: 10vw;
+      margin: 2vw auto;
+      @include flex($jc: space-around);
+
+      .imagIco {
+        width: 11vw;
+        height: auto;
+        min-height: 10vw;
+
+        div {
+          width: 10vw;
+          height: 8vw;
+          background: white;
+          margin: 0.5vw auto;
+          border-radius: 0.7vw;
+          // transition: 0.7s;
+          &:hover {
+            margin-left: -0.5vw;
+            margin-top: -0.5vw;
+            box-shadow: 0.5vw 0.5vw 0.5vw 0.5vw black;
+          }
+
+          img {
+            width: 6vw;
+            height: auto;
+            display: block;
+            margin: 1vw auto 0;
+          }
+          .html{
+            width:8vw;
+            height:6vw;
+          }
+          .bootstrap{
+            width: 8vw;
+            height:6vw;
+            padding-top: 1vw ;
+          }
+          .nest{
+            width: 7vw;
+            height:5.5vw;
+          }
+          .nodJs{
+            width: 7vw;
+            height:5.5vw;
+            // padding-top: 1vw ;
+          }
+          .mysql{
+            width: 8vw;
+            height:5vw;
+            margin-top: 1vw ;
+            background: #0000004b;
+          }
+          .swagger{
+            width:10vw;
+            height:4vw;
+          }
+          h3 {
+            font-size: 1.5vw;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  #section2 {
+    h2 {
+      font-size: 3vw;
+    }
+
+    #contenaire-Compet {
+      width: 85vw;
+
+      .boiteComp {
+        width: 75vw;
+
+        .imagIco {
+          width: 20vw;
+
+          div {
+            width: 18vw;
+            height: 14vw;
+            &:hover{
+              
+              margin:0 auto;
+            }
+
+            img {
+              width: 10vw;
+            }
+            .html{
+                width: 14vw;
+                height: auto;
+                margin: 0 auto;
+            }
+            .bootstrap{
+                width: 14vw;
+                height: auto;
+                // margin: 0 auto;
+                padding-top: 2vw;
+            }
+            .mysql{
+                width:16vw;
+                height:auto;
+                // margin-top: 4vw;
+            }
+            .swagger{
+                width:18vw;
+                height:auto;
+                margin-top: 4vw;
+            }
+            .nest{
+                width: 13vw;
+                height:auto;
+            }
+            .nodJs{
+                width: 13vw;
+                height:auto;
+            }
+
+            h3 {
+              font-size: 2.5vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile{
+  #section2 {
+    h2 {
+      font-size: 5vw;
+      margin-bottom: 5vw;
+    }
+
+    #contenaire-Compet {
+      width: 100vw;
+      padding: 4vw;
+
+      .boiteComp {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        .imagIco {
+          width: 66vw;
+        //   height: 40vw;
+          margin-bottom: 5vw;
+
+          div {
+            width: 45vw;
+            height: 40vw;
+            height: auto;
+            padding: 5vw 0;
+            
+
+            
+            .html{
+                width: 30vw;
+                height: auto;
+                margin: 0 auto;
+            }
+            .bootstrap{
+                width: 30vw;
+                height: auto;
+                // margin: 0 auto;
+                padding-top: 2vw;
+            }
+            .mysql{
+                width:30vw;
+                height:auto;
+                // margin-top: 4vw;
+            }
+            .swagger{
+                width:30vw;
+                height:auto;
+                margin-top: 4vw;
+            }
+            .nest{
+                width: 28vw;
+                height:auto;
+            }
+            .nodJs{
+                width: 29vw;
+                height:auto;
+            }
+            img {
+              width: 30vw;
+              height: 25vw;
+              margin: 0 auto;
+            }
+
+            h3 {
+              font-size: 5vw;
+              margin-top: 2vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}

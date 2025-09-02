@@ -1,0 +1,51 @@
+@import "../../library/layout/layout.scss";
+
+@include Police();
+
+@mixin card($wd:100%, $ht:auto){
+    .card{
+        @include size($wd:$wd, $ht:$ht);
+        @include flexColumn();
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+        @content;
+
+        @include tablet {
+            @include size($wd:calc(100% - 2vw), $ht:$ht);
+        }
+
+        @include mobile {
+            @include size($ht:$ht);
+        }
+    }
+}
+
+@mixin cardHead($ht:auto, $jc:start, $pd:2vw){
+    .card-head{
+        @include size($ht:$ht);
+        @include flex($jc:$jc);
+        padding: $pd;
+    
+        @content;
+    }
+}
+
+@mixin cardBody($ht:auto, $jc:space-between, $al:center, $pd:1vw 2vw, $gp:1vw){
+    .card-body{
+        @include size($ht:$ht);
+        @include flexColumn($jc:$jc, $al:$al, $gp:$gp);
+        padding: $pd;
+
+        @content;
+    }
+}
+
+@mixin cardFoot($ht:auto, $jc:space-between, $al:center, $gp:0.5vw, $pd:2vw){
+    .card-foot{
+        @include size($ht:$ht);
+        @include flex($gp:$gp, $jc:$jc, $al:$al);
+        padding: $pd;
+
+        @content;
+    }
+}

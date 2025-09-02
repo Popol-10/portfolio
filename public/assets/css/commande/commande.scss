@@ -1,0 +1,233 @@
+@import "../library/layout/layout.scss";
+
+@include Police();
+
+#pageCommande{
+    @include section();
+    @include flexColumn($gp:1.5vw);
+    overflow: auto;
+    padding: 0.5vw 2vw 2vw 2vw;
+
+    #contentStat{
+        @include size($ht:auto);
+        @include flex($jc:space-between, $gp:1vw);
+    
+        .stat{
+            @include size($wd:30%);
+            @include flexColumn($gp:1.5vw);
+            background-color: #fff;
+            padding: 1.5vw;
+            border-radius: 0.5vw;
+            flex-grow: 1;
+    
+            #contentTitre{
+                @include size($ht:auto);
+                @include flex($jc:space-between);
+    
+                #titre{
+                    font-size: 1.1vw;
+                    font-family: "medium";
+                    font-weight: 500;
+                    color: $gris4;
+                }
+    
+                #contentIcone{
+                    @include size($wd:3vw, $ht:3vw);
+                    @include flex();
+                    border-radius: 50%;
+                    background-color: $loko4;
+    
+                    svg{
+                        @include size($wd:1.5vw);
+                        path{
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+    
+            #contentNbr{
+                @include size($ht:auto);
+                @include flex($jc:space-between);
+    
+                #nbr{
+                    font-size: 1.6vw;
+                    font-family: "ExtraBold";
+                    font-weight: 500;
+                    color: $black;
+                }
+            }
+        }
+
+        .total{
+            background-color: #A3E4D7;
+
+            #contentTitre{
+                #titre{
+                    color: $gris5;
+                }
+            }
+        }
+    }
+
+    #headCom{
+        @include size($ht:auto);
+        @include flex($jc:space-between);
+
+        #contentTitre{
+            @include size($ht:auto, $wd:auto);
+            @include flex($jc:start, $gp:1vw);
+
+            #contentIcone{
+                @include size($wd:auto, $ht:auto);
+                @include flex();
+                background-color: #fff;
+                border-radius: 50%;
+                padding:0.8vw;
+            }
+
+            #titre{
+                font-size: 1.2vw;
+                font-family: "medium";
+                font-weight: 500;
+                color: #303030;
+            }
+        }
+
+        #contentAction{
+            @include size($wd:auto, $ht:auto);
+            @include flex($jc:space-between, $gp:0.5vw);
+
+            #contentSearch{
+                @include size($ht:auto, $wd:auto);
+                position: relative;
+                #contentInput{
+                    @include size($wd:25vw, $ht:3.5vw);
+                    @include flex($jc:start);
+                    background-color: #fff;
+                    border-radius: 2vw;
+                    padding-right: 1vw;
+
+                    #contentIcone{
+                        @include size($wd:15%);
+                        @include flex();
+
+                        #iconeSearch{
+                            color: $gris5;
+                        }
+                    }
+
+                    input{
+                        @include input($wd:85%);
+                        border:none;
+                        padding: 0;
+                    }
+                }
+
+                .content_search{
+                    width: 100%;
+                    height: auto;
+                    position: absolute;
+                    background-color: #fff;
+                    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+                    padding: 1.5vw;
+                    visibility: hidden;
+                    opacity: 0;
+
+                    .liste{
+                        padding: 0.5vw;
+                        list-style-type: none;
+                        color: #303030;
+                        cursor: pointer;
+                    }
+                    .liste:hover{
+                        background-color: #12121211;
+                    }
+                }
+                .content_search.active{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
+            #btnAdd{
+                @include size($wd:auto, $ht:3.5vw);
+                @include button($bg:$loko3, $pd:0.5vw 1.5vw, $brad:2vw);
+                gap: 0.5vw;
+            }
+
+        }
+    }
+
+    #tablecontent{
+        @include size($ht:auto);
+        @include flexColumn();
+        border-radius: 0.5vw;
+        background-color: #fff;
+        padding: 1.5vw;
+
+        #headTable{
+            @include size($ht:auto);
+            @include flex($jc:space-between);
+            @include border($ps:bottom, $col:$gris);
+            padding-bottom: 1.5vw;
+            #titre{
+                font-size: 1.1vw;
+                font-family: "medium";
+                font-weight: 500;
+            }
+        }
+
+        table{
+            @include size($ht:auto);
+            border-collapse: collapse;
+            thead{
+                tr{
+                    th{
+                        padding: 1vw 1.5vw;
+                        font-size: 1vw;
+                        text-align: start;
+                        color: $black;
+                        background-color: $lavande;
+                    }
+                }
+            }
+
+            tbody{
+                tr{
+                    td{
+                        @include border($ps:bottom, $col:$gris);
+                        padding: 1vw 1.5vw;
+                        font-size: 1vw;
+                        text-align: start;
+                        color: $black;
+
+                        #action{
+                            @include size($wd:auto);
+                            @include flex($gp:0.5vw);
+
+                            .btnAction{
+                                @include button($pd:0, $bg:transparent);
+                                @include size($wd:auto, $ht:2.6vw);
+                                
+                            
+                                #icone{
+                                    @include size();
+                                    @include flex();
+                                    path{
+                                        fill: $loko5;
+                                    }
+                                }
+                            
+                            }
+                        }
+                    }
+
+                    #colAction{
+                        @include size($wd:5vw);
+                    }
+                }
+            }
+        }
+    }
+}

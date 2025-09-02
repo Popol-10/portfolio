@@ -1,0 +1,121 @@
+
+@import "../../library/layout/layout.scss";
+
+@include Police();
+
+#header {
+  @include size($wd: 100vw, $ht: auto);
+  position: fixed;
+  top: 0;
+  z-index: 900;
+  background: #f7ebeb8f;
+
+  nav {
+    @include size($wd:100vw, $ht:4vw);
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // padding: 0 5vw;
+
+    /* --- Bouton Hamburger --- */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 25px;
+      height: 18px;
+      cursor: pointer;
+      position: absolute;
+      z-index: 800;
+      top: 1vw;
+      right: 3vw;
+      span {
+        height: 3px;
+        width: 100%;
+        background: #fcf9f9;
+        border-radius: 2px;
+        transition: 0.3s ease;
+      }
+    }
+    ul {
+      @include flex($jc:space-around);
+      align-items: center;
+      list-style: none;
+      width: 70vw;
+      height: 4vw;
+      // background: rgb(71, 68, 68);
+      margin: 0 auto;
+      li {
+        width:14vw;
+        height: 2vw;
+        text-align: center;
+
+        &:hover{
+          background: rgba(143, 139, 139, 0.404);
+        }
+        a {
+          @include lien($col: #ffffffe1, $fs: 1.6vw);
+          font-weight: bold;
+          // background: #6d0202;
+          // width: 10vw;
+          // padding: .5vw 3vw;
+          text-align: center;
+          &:hover {
+            // background-color: $hover;
+            color: #6d0505;
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+/* --- RESPONSIVE --- */
+
+/* Mobile */
+@media (max-width: 768px) {
+  #header {
+  background: transparent;
+
+    nav {
+      height: auto;
+      .hamburger {
+        display: flex;
+      }
+
+      ul {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: auto;
+        background: #1d1c1c;
+        flex-direction: column;
+        align-items: center;
+        gap: 3vw;
+        padding: 1vw 0;
+        transform: translateY(-40vw);
+        transition: 0.3s ease-in-out;
+
+        li{
+          width: 100vw;
+          height: 4vw;
+          padding:1vw 1.5vw;
+          a {
+            width: 100vw;
+            height: 4vw;
+            font-size: 2.2vw;
+            display: block;
+            text-align: left;
+          }
+        } 
+      }
+
+      /* Classe active quand on ouvre */
+      ul.active {
+        transform: translateY(0);
+      }
+    }
+  }
+}

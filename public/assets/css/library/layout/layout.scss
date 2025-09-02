@@ -1,0 +1,253 @@
+@import "../../library/mixin.scss";
+@import "../../library/propriety.scss";
+
+$font-path: "../../fonts/";
+$font-path: "../../fonts/";
+
+@mixin Police($style:"Regular"){
+    @font-face {
+        font-family: "MaPolice";
+        src: url("#{$font-path}/Inter-"+$style+".ttf");
+    }
+}
+
+@font-face {
+    font-family: "Light";
+    src: url("#{$font-path}/Inter-Light.ttf");
+}
+@font-face {
+    font-family: "ExtraLight";
+    src: url("#{$font-path}/Inter-ExtraLight.ttf");
+}
+@font-face {
+    font-family: "SemiBold";
+    src: url("#{$font-path}/Inter-SemiBold.ttf");
+}
+@font-face {
+    font-family: "ExtraBold";
+    src: url("#{$font-path}/Inter-ExtraBold.ttf");
+}
+@font-face {
+    font-family: "Medium";
+    src: url("#{$font-path}/Inter-Medium.ttf");
+}
+@font-face {
+    font-family: "Thin";
+    src: url("#{$font-path}/Inter-Thin.ttf");
+}
+@font-face {
+    font-family: "Black";
+    src: url("#{$font-path}/Inter-Black.ttf");
+}
+
+*{
+    font-family: "MaPolice";
+    @include bodyMarge();   
+}
+
+$gris: #F7F7F7;
+$gris1: #E1DFE9;
+$gris2: #E9ECEF;
+$gris3: #F7F7F7;
+$gris4: #908E9B;
+$gris5: #565360;
+$gris6:#F5F5F5;
+$gris7: #E8E8E8;
+$secondary: #4B556B;
+$focus: #8d44ad4d;
+
+$shadow1: 4px 4px 15.4px 0px #0049b70e;
+
+$shadow : rgba(0,0,0,0.1);
+$shadow2 : rgba(0,0,0,0.2);
+$shadow3 : rgba(189, 148, 148, 0.3);
+$shadow4 : rgba(0,0,0,0.4);
+$shadow5: rgba(0,0,0,0.5);
+$border: 1px solid #000;
+
+$boxShadow1: 0 1px 4px rgba(0,0,0,0.1),
+0 3px 8px rgba(0,0,0,0.08);
+
+$loko1: #1746A2;
+$loko2: #5F9DF7;
+$loko3: #FFF7E9;
+$loko4: #FF731D;
+$loko5: #ff1d58;
+$loko3: #4B0082;
+$loko7: #ffffff54;
+
+$lavande: #E6E6FA;
+$hover: #ecf0f127;
+$violet: #8E44AD;
+
+$green: #2C7865;
+$pret: #FFA726;
+$don: #5CC6B3;
+$black: #444746;
+
+$blancCasse: #F9F9F9;
+$grisClair: #E6E6E6;
+$grisFonce: #444444;
+$orangeDoux: #FFA726;
+$jauneDore: #FFC107;
+$bleuClair: #5CC6B3;
+$vertDoux: #A3D9C8;
+$bleuElectrique: #42a5f5;
+$rougeCorail: #F44336;
+$primaryBtn: #FFA726;
+
+.error{
+    color: $loko5;
+    font-weight: 500;
+    font-family: "medium";
+}
+
+.aucune{
+    @include size();
+    @include flex();
+    p{
+        font-weight: 500;
+        font-family: "medium";
+        color: #0049b765;
+    }
+}
+
+@mixin head($pd:2vw, $fs:1.2vw){
+    .head{
+        @include size($ht:auto);
+        @include flex($jc:start, $gp:0.8vw);
+        padding:$pd;
+
+        #titre{
+            font-size: $fs;
+            font-weight: 500;
+            font-family: "medium";
+            color: #303030;
+        }
+
+        #container-icone{
+            @include size($wd:auto, $ht:auto);
+            @include flex();
+            background-color: $gris;
+            padding: 0.5vw;
+            border-radius: 10px;
+        }
+    }
+}
+
+@mixin select(){
+    .form-group{
+        @include size($ht:auto);
+        @include flexColumn($gp:0.3vw);
+        .error{
+            color:#DB3737;
+        }
+        .label{
+            @include font($col:#121212, $size:1vw, $weight:500);
+            font-family: "SemiBold";
+        }
+        .content-select{
+            @include size($ht:3vw);
+            @include flex();
+            @include border($col:#ececec, $brad:3px);
+            position: relative;
+            cursor: pointer;
+            .icone{
+                @include size($wd:10%);
+                @include flex();
+                background-color: $gris;
+                color: $loko1;
+                font-size: 1vw;
+            }
+            .input{
+                @include input($ht:3vw, $wd:90%);
+                @include font($col:$gris3, $size:1vw, $weight:500);
+                @include border($col:transparent);
+                background-color: transparent;
+                font-family: "SemiBold";
+                pointer-events: none;
+            }
+            .select{
+                @include position($ps:absolute, $top:3vw, $rgt:0);
+                @include size($ht:15vw, $wd:90%);
+                @include flexColumn($jc:start, $gp:0.5vw);
+                @include border($col:#ececec, $brad:3px);
+                @include shadow($col:$shadow1);
+                overflow-y: scroll;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s;
+                background-color: #fff;
+                padding: 1vw;
+                z-index: 1;
+                .liste{
+                    @include size($ht:auto);
+                    @include font($col:$gris3, $size:1vw, $weight:500);
+                    border-radius: 3px;
+                    padding:0.5vw 0.8vw;
+                    list-style: none;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $gris;
+                    }
+                }
+            }
+            .angle{
+                @include size($wd:10%);
+                @include flex();
+                background-color: transparent;
+                color: $loko1;
+                font-size: 1vw;
+                transition: all 0.3s;
+            }
+            .select.active{
+                opacity: 1;
+                visibility: visible;
+                transition:all 0.3s;
+            }
+            .select.active .angle{
+                transform: rotate(180deg);
+                transition: all 0.3s;
+            }
+        }
+        .error{
+            @include font($col:#DB3737, $size:0.9vw, $weight:500);
+        }
+    }
+}
+
+@mixin inputError(){
+    .content-input.error{
+        @include border($col:crimson, $brad:3px);
+    }
+    .content-input{
+        @include size($ht:3vw);
+        @include flex($jc:start);
+        @include border($col:$gris, $brad:3px);
+        overflow: hidden;
+        .icone{
+            @include size($wd:12%);
+            @include flex();
+            @include border($col:$gris, $ps:right);
+            background-color: $gris;
+            color:$loko1;
+        }
+        .icone-error{
+            @include size($wd:12%);
+            @include flex();
+            color: crimson;
+            transition: all 0.5s;
+        }
+        .input{
+            @include input();
+            @include border($col:transparent);
+            @include font($col:$gris3, $size:1vw, $weight:500);
+            flex-grow: 1;
+        }
+    }
+    .error{
+        @include font($col:crimson, $size:0.9vw, $weight:500);
+        font-family: "SemiBold";
+        transition: all 0.5s;
+    }
+}

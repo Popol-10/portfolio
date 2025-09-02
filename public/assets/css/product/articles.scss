@@ -1,0 +1,136 @@
+@import "../library/layout/layout.scss";
+
+@include Police();
+
+.cardArticles{
+    @include size($wd:32.4%, $ht:auto);
+    @include flexColumn($gp:1vw);
+    background-color: #fff;
+    border-radius: 1vw;
+    padding: 1.5vw;
+
+    #contentImage{
+        @include size($ht:13vw);
+        img{
+            @include img($brad:0.5vw);
+        }
+    }
+
+    #contentArt{
+        @include size($ht:auto);
+        @include flexColumn();
+
+        #headCard{
+            @include size($ht:auto);
+            @include flex($jc:start);
+            @include border($ps:bottom, $col:$gris2);
+            padding-bottom: 1vw;
+    
+            #nomArt{
+                @include size($ht:auto);
+                @include flexColumn($gp:0.3vw);
+    
+                #nom{
+                    font-size: 1vw;
+                    font-family: "SemiBold";
+                    font-weight: 500;
+                    color: #121212;
+                }
+
+                #infosArt{
+                    @include size($ht:auto);
+                    @include flex($jc:space-between);
+
+                    #categorie{
+                        @include size($wd:auto, $ht:auto);
+                        @include flex($gp:0.3vw);
+                        #rond{
+                            @include size($wd:0.5vw, $ht:0.5vw);
+                            border-radius: 50%;
+                            background-color: #8E44AD;
+                        }
+                        #cat{
+                            @include size($wd:auto, $ht:auto);
+                            color: $shadow4;
+                            font-family: "SemiBold";
+                        }
+                    }
+
+                    #ref{
+                        font-size: 1vw;
+                        font-family: "SemiBold";
+                        color: #303030;
+                    }
+                }
+            }
+        }
+
+        #bodyCard{
+            @include size($ht:auto);
+            @include flexColumn($gp:1vw);
+            padding: 1vw 0;
+            .infosCat{
+                @include size($ht:auto);
+                @include flex($jc:start, $gp:0.5vw);
+                
+                #contentIcone{
+                    @include size($wd:auto, $ht:auto);
+                    @include flex();
+                    
+                }
+    
+                .text{
+                    font-size: 1.1vw;
+                    font-family: "medium";
+                    color: $gris5;
+                }
+                .nom{
+                    @include size($ht:auto);
+                    @include flex($jc:start, $gp:0.5vw);
+                    color: #303030;
+    
+                    #nbr{
+                        font-family: "SemiBold";
+                    }
+                    #pieces{
+                        color: $gris4;
+                        font-family: "medium";
+                    }
+                }
+                .prix{
+                    @include size($ht:auto);
+                    @include flex($jc:start, $gp:0.5vw);
+    
+                    #min, #max{
+                        font-family: "SemiBold";
+                        color: #121212;
+    
+                    }
+                }
+            }
+        }
+        #footCard{
+            @include size($ht:auto);
+            @include flex($jc:start, $gp:0.5vw);
+            padding-top: 0.5vw;
+            
+            .btn{
+                @include button($bg:#fff, $pd:1vw);
+                @include border($col:$lavande, $brad:0.5vw);
+                @include size($ht:3vw, $wd:auto);
+    
+                &:hover{
+                    background-color: $gris;
+                }
+    
+                .icone{
+                    color: #121212;
+                    width: 1.5vw;
+                }
+                .trash{
+                    color: $rougeCorail;
+                }
+            }
+        }
+    }
+}

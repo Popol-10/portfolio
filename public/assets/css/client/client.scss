@@ -1,0 +1,138 @@
+@import "../library/layout/layout.scss";
+
+@include Police();
+
+#pageClient{
+    @include section();
+    @include flexColumn($gp:1.5vw);
+    overflow: auto;
+    padding: 0vw 2vw 2vw 2vw;
+
+    #headClient{
+        @include size($ht:auto);
+        @include flex($jc:space-between);
+
+        #contentTitre{
+            @include size($ht:auto, $wd:auto);
+            @include flex($jc:start, $gp:1vw);
+
+            #contentIcone{
+                @include size($wd:auto, $ht:auto);
+                @include flex();
+                background-color: #fff;
+                border-radius: 50%;
+                padding:0.8vw;
+            }
+
+            #titre{
+                font-size: 1.2vw;
+                font-family: "medium";
+                font-weight: 500;
+                color: #303030;
+            }
+        }
+
+        #contentAction{
+            @include size($wd:auto, $ht:auto);
+            @include flex($jc:space-between, $gp:0.5vw);
+
+            #contentSearch{
+                @include size($ht:auto, $wd:auto);
+                
+                #contentInput{
+                    @include size($wd:25vw, $ht:3.5vw);
+                    @include flex($jc:start);
+                    background-color: #fff;
+                    border-radius: 2vw;
+                    padding-right: 1vw;
+
+                    #contentIcone{
+                        @include size($wd:15%);
+                        @include flex();
+
+                        #iconeSearch{
+                            color: $gris5;
+                        }
+                    }
+
+                    input{
+                        @include input($wd:85%);
+                        border:none;
+                        padding: 0;
+                    }
+                }
+            }
+
+            #btnAdd{
+                @include size($wd:auto, $ht:3.5vw);
+                @include button($bg:$loko3, $pd:0.5vw 1.5vw, $brad:2vw);
+                gap: 0.5vw;
+            }
+
+        }
+    }
+
+    #bodyClient{
+        @include size($ht:auto);
+        @include flex($jc:start, $al:start, $gp:1vw, $fw:wrap);
+
+        .cardClient{
+            @include size($wd:32.4%, $ht:auto);
+            @include flexColumn($gp:1.5vw);
+            background-color: #fff;
+            border-radius: 1.5vw;
+            padding: 2vw;
+
+            #bodyCard{
+                @include size($ht:auto);
+                @include flexColumn($gp:1vw);
+
+                .infosPerso{
+                    @include size($ht:auto);
+                    @include flex($jc:start, $gp:0.5vw);
+                    
+                    #contentIcone{
+                        @include size($wd:auto, $ht:auto);
+                        @include flex();
+                        
+                    }
+
+                    .text{
+                        font-size: 1vw;
+                        font-family: "medium";
+                        color: $gris5;
+                    }
+                    .nom{
+                        color: #121212;
+                    }
+                }
+            }
+
+            #footCard{
+                @include size($ht:auto);
+                @include flex($jc:start, $gp:0.5vw);
+                @include border($ps:top, $col:$gris);
+                padding-top: 1.5vw;
+                
+                .btn{
+                    @include button($bg:#fff, $pd:1vw);
+                    @include border($col:$lavande, $brad:0.5vw);
+                    @include size($ht:3vw, $wd:auto);
+
+                    &:hover{
+                        background-color: $gris;
+                    }
+
+                    .icone{
+                        color: #121212;
+                        width: 1.5vw;
+                    }
+                    .trash{
+                        color: $rougeCorail;
+                    }
+                }
+            }
+
+        }
+    }
+}

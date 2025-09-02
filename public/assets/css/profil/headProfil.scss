@@ -1,0 +1,47 @@
+@import "../library/layout/layout.scss";
+
+@include Police();
+
+#headProfil{
+    @include size($ht:auto);
+    @include flex($jc:start);
+    
+    #contentLink{
+        @include size($wd:auto, $ht:auto);
+        @include flex();
+        border-radius: 0.3vw;
+        overflow: hidden;
+        
+        .lien{
+            @include button($pd:1vw 2vw);
+            @include size($wd:auto, $ht:auto);
+            text-decoration: none;
+            background-color: #fff;
+            color: #121212;
+            border-radius: 0;
+            position: relative;
+            font-family: "medium";
+            font-size: 1vw;
+
+            &::after{
+                content: "";
+                @include position($ps:absolute, $btt:0);
+                @include size($ht:0.2vw);
+            }
+
+            &:hover{
+                &::after{
+                    background-color: $loko3;
+                }
+            }
+        }
+        .lien.active{
+            color: $loko3;
+            &::after{
+                background-color: $loko3;
+            }
+        }
+    }
+
+}
+

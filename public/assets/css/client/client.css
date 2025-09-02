@@ -1,0 +1,485 @@
+@font-face {
+  font-family: "Light";
+  src: url("../../fonts//Inter-Light.ttf");
+}
+
+@font-face {
+  font-family: "ExtraLight";
+  src: url("../../fonts//Inter-ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: "SemiBold";
+  src: url("../../fonts//Inter-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "ExtraBold";
+  src: url("../../fonts//Inter-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Medium";
+  src: url("../../fonts//Inter-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Thin";
+  src: url("../../fonts//Inter-Thin.ttf");
+}
+
+@font-face {
+  font-family: "Black";
+  src: url("../../fonts//Inter-Black.ttf");
+}
+
+* {
+  font-family: "MaPolice";
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.error {
+  color: #ff1d58;
+  font-weight: 500;
+  font-family: "medium";
+}
+
+.aucune {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+}
+
+.aucune p {
+  font-weight: 500;
+  font-family: "medium";
+  color: #0049b765;
+}
+
+@font-face {
+  font-family: "MaPolice";
+  src: url("../../fonts//Inter-Regular.ttf");
+}
+
+#pageClient {
+  position: static;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5vw;
+  overflow: auto;
+  padding: 0vw 2vw 2vw 2vw;
+}
+
+#pageClient #headClient {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+}
+
+#pageClient #headClient #contentTitre {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1vw;
+}
+
+#pageClient #headClient #contentTitre #contentIcone {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 0.8vw;
+}
+
+#pageClient #headClient #contentTitre #titre {
+  font-size: 1.2vw;
+  font-family: "medium";
+  font-weight: 500;
+  color: #303030;
+}
+
+#pageClient #headClient #contentAction {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.5vw;
+}
+
+#pageClient #headClient #contentAction #contentSearch {
+  width: auto;
+  height: auto;
+}
+
+#pageClient #headClient #contentAction #contentSearch #contentInput {
+  width: 25vw;
+  height: 3.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  background-color: #fff;
+  border-radius: 2vw;
+  padding-right: 1vw;
+}
+
+#pageClient #headClient #contentAction #contentSearch #contentInput #contentIcone {
+  width: 15%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+}
+
+#pageClient #headClient #contentAction #contentSearch #contentInput #contentIcone #iconeSearch {
+  color: #565360;
+}
+
+#pageClient #headClient #contentAction #contentSearch #contentInput input {
+  width: 85%;
+  height: 3vw;
+  padding: 0 1vw;
+  border: 1px solid #c9c7c7;
+  border-radius: 5px;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  border: none;
+  padding: 0;
+}
+
+#pageClient #headClient #contentAction #btnAdd {
+  width: auto;
+  height: 3.5vw;
+  padding: 0.5vw 1.5vw;
+  margin: 0;
+  border: none;
+  border-radius: 2vw;
+  color: #fff;
+  font-size: 1vw;
+  background-color: #4B0082;
+  cursor: pointer;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  gap: 0.5vw;
+}
+
+@media (max-width: 768px) {
+  #pageClient #headClient #contentAction #btnAdd {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+#pageClient #bodyClient {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1vw;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#pageClient #bodyClient .cardClient {
+  width: 32.4%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5vw;
+  background-color: #fff;
+  border-radius: 1.5vw;
+  padding: 2vw;
+}
+
+#pageClient #bodyClient .cardClient #bodyCard {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1vw;
+}
+
+#pageClient #bodyClient .cardClient #bodyCard .infosPerso {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.5vw;
+}
+
+#pageClient #bodyClient .cardClient #bodyCard .infosPerso #contentIcone {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+}
+
+#pageClient #bodyClient .cardClient #bodyCard .infosPerso .text {
+  font-size: 1vw;
+  font-family: "medium";
+  color: #565360;
+}
+
+#pageClient #bodyClient .cardClient #bodyCard .infosPerso .nom {
+  color: #121212;
+}
+
+#pageClient #bodyClient .cardClient #footCard {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.5vw;
+  border-top: 1px solid #F7F7F7;
+  border-radius: 0;
+  padding-top: 1.5vw;
+}
+
+#pageClient #bodyClient .cardClient #footCard .btn {
+  padding: 1vw;
+  margin: 0;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1vw;
+  background-color: #fff;
+  cursor: pointer;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  border: 1px solid #E6E6FA;
+  border-radius: 0.5vw;
+  width: auto;
+  height: 3vw;
+}
+
+@media (max-width: 768px) {
+  #pageClient #bodyClient .cardClient #footCard .btn {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+#pageClient #bodyClient .cardClient #footCard .btn:hover {
+  background-color: #F7F7F7;
+}
+
+#pageClient #bodyClient .cardClient #footCard .btn .icone {
+  color: #121212;
+  width: 1.5vw;
+}
+
+#pageClient #bodyClient .cardClient #footCard .btn .trash {
+  color: #F44336;
+}
+/*# sourceMappingURL=client.css.map */

@@ -1,0 +1,160 @@
+@import "../library/layout/layout.scss";
+
+@include Police();
+
+$violet: #8e44ad;
+
+#editProfil {
+  @include section();
+  @include flexColumn($gp: 1.5vw);
+  overflow: auto;
+
+  #bodyProfil {
+    @include size();
+    @include flex($gp: 1vw, $al: start);
+
+    #contentPhoto {
+      @include size($wd: 30%, $ht: auto);
+      @include flexColumn($al: center, $gp: 2vw);
+      padding: 2vw;
+      border-radius: 1vw;
+      background-color: #fff;
+
+      #contentImage {
+        @include size($wd: 10vw, $ht: 10vw);
+        img {
+          @include img();
+        }
+      }
+
+      #contentAction {
+        @include size($ht: auto);
+        @include flexColumn($gp: 0.5vw);
+
+        .btn {
+            @include button($pd:1vw, $bg:$violet);
+            @include size($ht:auto);
+
+        }
+        
+        .compte{
+            @include border($col:$gris2, $brad:0.5vw);
+            background-color: #fff;
+            color: #303030;
+            font-family: "medium";
+            
+            &:hover {
+              background-color: $gris;
+            }
+        }
+      }
+    }
+
+    #contentInfos {
+      @include size($wd: 70%, $ht: auto);
+      @include flexColumn($gp:2vw);
+      background-color: #fff;
+      border-radius: 1vw;
+      padding: 2vw;
+
+      #headContent {
+        @include size($ht: auto);
+        @include flex($jc: start);
+        padding-bottom: 1.5vw;
+
+        #titre {
+          font-size: 1.1vw;
+          font-family: "medium";
+          font-weight: 500;
+          color: #121212;
+        }
+      }
+
+      #bodyContent {
+        @include size($ht: auto);
+        @include flex($jc: space-between, $fw: wrap, $gp: 1vw);
+
+        .formGroup {
+          @include size($wd: 48.8%, $ht: auto);
+          @include flexColumn($gp: 0.4vw);
+          // padding: 1vw 0.5vw;
+
+          label {
+            font-size: 1vw;
+            font-family: "medium";
+            font-weight: 500;
+            color: #303030;
+          }
+
+          #content-input {
+            @include size($ht: 3.5vw);
+            @include flex($jc: start);
+            @include border($col: $lavande, $brad: 0.3vw);
+            background-color: $gris;
+            border-radius: 0.3vw;
+
+            #contentIcone {
+              @include size($wd: 15%);
+              @include flex();
+            }
+
+            input {
+              @include input();
+              @include size($wd: 85%);
+              background-color: transparent;
+              border: none;
+              font-size: 1vw;
+              font-family: "medium";
+              color: $gris5;
+              padding-left: 0;
+
+              
+            }
+          }
+        }
+
+        .bio {
+          @include size($ht: auto);
+          @include flexColumn($gp: 0.5vw);
+          border: none;
+          padding: 0;
+
+          label {
+            font-size: 1vw;
+            font-family: "medium";
+            color: #121212;
+          }
+
+          textarea {
+            @include size($ht: 15vw);
+            @include border($col: $lavande, $brad: 0.3vw);
+            padding: 1vw;
+            resize: none;
+            background-color: $gris;
+            font-size: 1vw;
+            outline: none;
+
+            &:focus {
+              @include border($col: $focus, $brad: 0.3vw);
+            }
+          }
+        }
+      }
+
+      #content-action{
+        @include size($ht:auto);
+        @include flex();
+
+        #btnAction{
+            @include button($pd:1vw, $bg:$violet);
+            @include size($ht:auto, $wd:25%);
+
+            &:disabled{
+              opacity: 0.5;
+              cursor: no-drop;
+            }
+        }
+      }
+    }
+  }
+}

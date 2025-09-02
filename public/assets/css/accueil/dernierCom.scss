@@ -1,0 +1,93 @@
+@import "../library/layout/layout.scss";
+
+@include Police();
+
+#contentCom{
+    @include size($ht:auto);
+    @include flexColumn($gp:1vw);
+
+    #headCom{
+        @include size($ht:auto);
+        @include flex($jc:space-between);
+        @include border($ps:bottom, $col:$shadow3);
+        padding: 0.5vw 0;
+
+        #titre{
+            font-size: 1.1vw;
+            font-family: "medium";
+            font-weight: 500;
+        }
+    }
+
+    #tablecontent{
+        @include size($ht:auto);
+        @include flexColumn();
+        border-radius: 0.5vw;
+        background-color: #fff;
+        padding: 1.5vw;
+
+        #headTable{
+            @include size($ht:auto);
+            @include flex($jc:space-between);
+            @include border($ps:bottom, $col:$gris);
+            padding-bottom: 1.5vw;
+            #titre{
+                font-size: 1.1vw;
+                font-family: "medium";
+                font-weight: 500;
+            }
+        }
+
+        table{
+            @include size($ht:auto);
+            border-collapse: collapse;
+            thead{
+                tr{
+                    th{
+                        padding: 1vw 1.5vw;
+                        font-size: 1vw;
+                        text-align: start;
+                        color: $black;
+                        background-color: $lavande;
+                    }
+                }
+            }
+
+            tbody{
+                tr{
+                    td{
+                        @include border($ps:bottom, $col:$gris);
+                        padding: 1vw 1.5vw;
+                        font-size: 1vw;
+                        text-align: start;
+                        color: $black;
+
+                        #action{
+                            @include size($wd:auto);
+                            @include flex($gp:0.5vw);
+
+                            .btnAction{
+                                @include button($pd:0, $bg:transparent);
+                                @include size($wd:auto, $ht:2.6vw);
+                                
+                            
+                                #icone{
+                                    @include size();
+                                    @include flex();
+                                    path{
+                                        fill: $loko5;
+                                    }
+                                }
+                            
+                            }
+                        }
+                    }
+
+                    #colAction{
+                        @include size($wd:5vw);
+                    }
+                }
+            }
+        }
+    }
+}

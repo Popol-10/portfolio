@@ -1,0 +1,45 @@
+@import "../library/layout/layout.scss";
+
+@include Police();
+
+#container{
+    @include size($ht:auto);
+    @include flex();
+    position: relative;
+
+    .btnSlide{
+        @include button($bg:#fff);
+        @include size($wd:3.3vw, $ht:3.3vw);
+        @include flex();
+        @include position($ps:absolute, $top:40%);
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 20;
+        box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+
+        #contentIcone{
+            @include size();
+            @include flex();
+            #iconePrev{
+                transform: rotate(90deg);
+            }
+            .btnIcone{
+                @include size($wd:4vw);
+            }
+        }
+    }
+    .prev{
+        left: -1.3vw;
+    }
+
+    .next{
+        transform: rotate(180deg);
+        right: -1.3vw;
+    }
+    
+    .liste-article{
+        @include size();
+        @include flex($gp:2vw);
+        padding:0.5vw;
+    }
+}

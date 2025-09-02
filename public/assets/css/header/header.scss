@@ -1,0 +1,329 @@
+@import "../library/layout/layout.scss";
+$shadow : 0 1px 5px $shadow1;
+
+@include Police();
+
+header{
+    @include size($ht:5vw);
+    @include flex($jc:space-between);
+    background-color: #fff;
+    padding: 0 2vw;
+    #menu-page{
+        @include size($wd:auto);
+        @include flex($jc:start, $gp:0.5vw);
+        #menu{
+            @include size($wd:3vw, $ht:2.5vw);
+            @include flex();
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            .icone{
+                font-size: 1.8vw;
+                color: #303030;
+            }
+        }
+        #page{
+            @include size($wd:calc(100% - 3vw));
+            @include flex($jc:start, $gp:1vw);
+            
+            .fa-angle-right{
+                &:nth-of-type(1){
+                    color: #333;
+                    font-size: 1.1vw;
+                }
+            }
+            a{
+                @include lien($fs:1.1vw);
+                transition: 0.3s;
+                color: #333;
+                &:hover{
+                    color: $loko1;
+                }
+            }
+            span{
+                color: #333;
+                font-size: 1.1vw;
+            }
+        }
+    }
+    #search{
+        @include size($wd:36%);
+        @include flex();
+        transition: 0.3s;
+        form{
+            @include size();
+            @include flex();
+            #inputSearch{
+                @include size($ht:3vw);
+                @include flex();
+                @include border($col:$gris, $brad:3px);
+                border-radius: 5px;
+                overflow: hidden;
+                i{
+                    @include size($wd:3.5vw);
+                    @include flex();
+                    background-color: $gris;
+                    color: $loko1;
+                }
+                input{
+                    @include input($wd:calc(100% - 2vw));
+                    flex-grow: 1;
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+        }
+    }
+    #userDashboard{
+        @include size($wd:40%);
+        @include flex($jc:end, $gp:1.5vw);
+        #notif{
+            @include size($wd:3.2vw, $ht:3.2vw);
+            border-radius: 50%;
+            background-color: #F5F5F5;
+            position: relative;
+            cursor: pointer;
+            z-index: 10;
+            .image{
+                @include size();
+                @include flex();
+                border-radius: 50%;
+                img{
+                    @include img($brad:0);
+                }
+                .icone{
+                    font-size: 1.5vw;
+                }
+            }
+            #count{
+                @include size($wd:1.4vw, $ht:1.4vw);
+                @include flex();
+                border-radius: 50%;
+                background-color: #DB3737;
+                font-size: 0.8vw;
+                position: absolute;
+                top: -0.2vw;
+                right: 0.2vw;
+                color: #fff;
+            }
+            #notification{
+                @include size($wd:27vw, $ht:auto);
+                background-color: #fff;
+                position:absolute;
+                top: 4vw;
+                right: 0vw;
+                border-radius: 5px;
+                box-shadow: 0 0 10px $shadow3;
+                opacity:0;
+                visibility: hidden;
+                transform: translateY(12px);
+                transition: all 0.5s;
+                #content-notif{
+                    @include size();
+                    @include flexColumn();
+                    #head-notif{
+                        @include size($ht:3.5vw);
+                        @include flex($jc:start);
+                        padding: 0 1vw;
+                        border-bottom: 1px solid #ececec;
+                        h4{
+                            color: $loko1;
+                            font-size: 1.2vw;
+                            font-weight: none;
+                        }
+                    }
+                    #body-notif{
+                        @include size($ht:auto);
+                        @include flexColumn();
+                        max-height: 25vw;
+                        padding: 0.5vw 0;
+                        overflow: auto;
+                        #content{
+                            @include size($ht:auto);
+                            @include flex($jc:start, $gp:1vw);
+                            cursor: pointer;
+                            padding: 0.5vw 1vw;
+                            #profil{
+                                @include size($wd:3.5vw, $ht:3.5vw);
+                                border-radius: 50%;
+                                border: 1px solid #ccc;
+                                img{
+                                    @include image($ht:100%);
+                                    border-radius: 50%;
+                                }
+                            }
+                            #text-content{
+                                @include size($wd:18.5vw);
+                                @include flexColumn();
+                                p{
+                                    font-size: 1vw;
+                                }
+                                #nom{
+                                    font-weight: bold;
+                                }
+                                #text-notif{
+                                    color: #333;
+                                }
+                                #duree{
+                                    color: #949393cc;
+                                    font-size: 0.9vw;
+                                }
+                            }
+                            &:hover{
+                                background-color:#ececec;
+                            }
+                        }
+                    }
+                    #foot-notif{
+                        @include size($ht:3vw);
+                        @include flex();
+                        border-top: 1px solid #ececec;
+                        button{
+                            @include size($ht:2.5vw, $wd:50%);
+                            @include button($bg:transparent, $col:#333);
+                            font-weight: bold;
+                            &:hover{
+                                color: $loko1;
+                            }
+                        }
+                    }
+                }
+            }
+            #notification.active{
+                opacity: 1;
+                visibility: visible;
+                transform: translate(0);
+                transition: all 0.5s;
+            }
+            
+        }
+        #profil{
+            @include size($wd:auto, $ht:3.5vw);
+            @include flex($gp:1.5vw);
+            position:relative;
+
+            #infosPerso{
+                @include size($wd:auto);
+                @include flex($gp:0.8vw);
+        
+                #image{
+                    @include size($wd:3vw, $ht:3vw);
+                    border: 1px solid #ccc;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    position: relative;
+                    img{
+                        border-radius: 50%;
+                        @include image($ht:100%);
+                    }
+                    #presence{
+                        @include size($wd:0.9vw, $ht:0.9vw);
+                        border-radius: 50%;
+                        background-color: #67C087;
+                        border: 1px solid #fff;
+                        position: absolute;
+                        right: 0.1vw;
+                        bottom: 0vw;
+                    }
+                }
+            
+                #infos{
+                    @include size($wd:auto);
+                    @include flexColumn($gp:0.2vw, $jc:center);
+                    #nom{
+                        font-size: 1.1vw;
+                        font-family: "medium";
+                        font-weight: 500;
+                        color: #303030;
+                    }
+                    #role{
+                        color: $gris4;
+                    }
+                }
+            }
+            #action{
+                @include size($wd:2.5vw, $ht:2.5vw);
+                @include flex();
+                @include button($col:#303030);
+                border-radius: 50%;
+                background-color: #F5F5F5;
+                
+                .icone{
+                    color: #303030;
+                    font-size: 1.2vw;
+                }
+            }
+            .containerProfil{
+                @include size($wd:15vw, $ht:auto);
+                @include flexColumn();
+                background-color: #fff;
+                position:absolute;
+                top: 4.5vw;
+                right: 0;
+                border-radius: 5px;
+                box-shadow: 0 0 10px $shadow3;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(13px);
+                transition: all 0.5s;
+                z-index: 10;
+                #head-profil{
+                    @include size($ht:auto);
+                    @include flexColumn($al:center, $jc:center);
+                    border-bottom: 1px solid #ececec;
+                    padding: 0.5vw;
+                    p{
+                        text-align: center;
+                        font-size: 1vw;
+                    }
+                    #nom{
+                        font-weight: bold;
+                        color:#333;
+                    }
+                    #role{
+                        color: #777676cc;
+                    }
+                }
+                #body-profil{
+                    @include size($ht:10vw);
+                    @include flexColumn($gp:0.5vw);
+                    padding: 0.5vw;
+                    .action{
+                        @include size($ht:3vw);
+                        @include flex($jc:start, $gp:1vw);
+                        @include lien();
+                        font-size: 1.1vw;
+                        padding: 0 0.5vw;
+                        border-radius: 3px;
+                        transition: 0.3s;
+                        cursor: pointer;
+                        i{
+                            color: $loko1;
+                        }
+                        span{
+                            color: #333;
+                        }
+                        &:hover{
+                            background-color:#ececec;
+                            
+                        }
+                        #btnDeconnect{
+                            @include size();
+                            @include flex($jc:start, $gp:1vw);
+                            background-color: transparent;
+                            border: none;
+                            font-size: 1.1vw;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .container-profil.active{
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                transition: all 0.5s;
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+@import "../library/layout/layout.scss";
+
+@include Police();
+
+#contentStat{
+    @include size($ht:auto);
+    @include flex($jc:space-between, $gp:1vw);
+
+    .stat{
+        @include size($wd:30%);
+        @include flexColumn($gp:1.5vw);
+        background-color: #fff;
+        padding: 1.5vw;
+        border-radius: 0.5vw;
+        flex-grow: 1;
+
+        #contentTitre{
+            @include size($ht:auto);
+            @include flex($jc:space-between);
+
+            #titre{
+                font-size: 1.1vw;
+                font-family: "medium";
+                font-weight: 500;
+                color: $gris4;
+            }
+
+            #contentIcone{
+                @include size($wd:3vw, $ht:3vw);
+                @include flex();
+                border-radius: 50%;
+                background-color: $loko4;
+
+                svg{
+                    @include size($wd:1.5vw);
+                    path{
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+
+        #contentNbr{
+            @include size($ht:auto);
+            @include flex($jc:space-between);
+
+            #nbr{
+                font-size: 1.6vw;
+                font-family: "ExtraBold";
+                font-weight: 500;
+                color: $black;
+            }
+        }
+    }
+}

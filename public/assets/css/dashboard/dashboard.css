@@ -1,0 +1,227 @@
+@font-face {
+  font-family: "Light";
+  src: url("../../fonts//Inter-Light.ttf");
+}
+
+@font-face {
+  font-family: "ExtraLight";
+  src: url("../../fonts//Inter-ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: "SemiBold";
+  src: url("../../fonts//Inter-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "ExtraBold";
+  src: url("../../fonts//Inter-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Medium";
+  src: url("../../fonts//Inter-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Thin";
+  src: url("../../fonts//Inter-Thin.ttf");
+}
+
+@font-face {
+  font-family: "Black";
+  src: url("../../fonts//Inter-Black.ttf");
+}
+
+* {
+  font-family: "MaPolice";
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.error {
+  color: #ff1d58;
+  font-weight: 500;
+  font-family: "medium";
+}
+
+.aucune {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+}
+
+.aucune p {
+  font-weight: 500;
+  font-family: "medium";
+  color: #0049b765;
+}
+
+@font-face {
+  font-family: "MaPolice";
+  src: url("../../fonts//Inter-Regular.ttf");
+}
+
+#dashboard {
+  width: 20%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5vw;
+  background-color: #4B0082;
+  position: fixed;
+}
+
+#dashboard #logo {
+  width: 80%;
+  height: 7vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.5vw;
+  border-bottom: 1px solid #ffffff54;
+  border-radius: 0;
+  padding: 2vw 0;
+}
+
+#dashboard #logo .appLogo {
+  width: 3vw;
+  height: 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  background-color: #F7F7F7;
+  border-radius: 50%;
+}
+
+#dashboard #logo .appLogo i {
+  font-size: 1.5vw;
+  color: #1746A2;
+}
+
+#dashboard #logo .appLogo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#dashboard #logo .contentTitre {
+  width: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  padding: 0 1vw;
+}
+
+#dashboard #logo .contentTitre #titre {
+  color: #ffffffda;
+  font-size: 1.6vw;
+  font-family: "medium";
+}
+
+#dashboard #logo .contentTitre #titre span:nth-of-type(1) {
+  color: #fff;
+  font-size: 2vw;
+  font-weight: 500;
+  font-style: normal;
+  font-family: "ExtraBold";
+}
+
+#dashboard #logo .contentTitre #titre span:nth-of-type(1) #v {
+  font-size: 2.8vw;
+}
+
+#dashboard #logo .contentTitre #titre span:nth-of-type(2) {
+  color: #1746A2;
+  font-size: 2vw;
+  font-weight: 500;
+  font-style: normal;
+  font-family: "ExtraBold";
+}
+
+main {
+  width: 80%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5vw;
+  background-color: #E6E6FA;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+}
+/*# sourceMappingURL=dashboard.css.map */

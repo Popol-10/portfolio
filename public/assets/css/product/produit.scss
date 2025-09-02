@@ -1,0 +1,115 @@
+@import "../library/layout/layout.scss";
+
+@include Police();
+
+#pageProduit{
+    @include section();
+    @include flexColumn($gp:1.5vw);
+    overflow: auto;
+    padding: 0vw 2vw 2vw 2vw;
+
+    #headProduit{
+        @include size($ht:auto);
+        @include flex($jc:space-between);
+        
+        #contentLink{
+            @include size($wd:auto, $ht:auto);
+            @include flex();
+            border-radius: 0.3vw;
+            overflow: hidden;
+            .lien{
+                @include button($pd:1vw 2vw);
+                @include size($wd:auto, $ht:auto);
+                text-decoration: none;
+                background-color: #fff;
+                color: #121212;
+                border-radius: 0;
+                position: relative;
+                font-family: "medium";
+                font-size: 1vw;
+                &::after{
+                    content: "";
+                    @include position($ps:absolute, $btt:0);
+                    @include size($ht:0.2vw);
+                }
+
+                &:hover{
+                    &::after{
+                        background-color: $loko3;
+                    }
+                }
+            }
+            .lien.active{
+                color: $loko3;
+                &::after{
+                    background-color: $loko3;
+                }
+            }
+        }
+        #contentAction{
+            @include size($wd:auto, $ht:auto);
+            @include flex($jc:space-between, $gp:0.5vw);
+
+            #contentSearch{
+                @include size($ht:auto, $wd:auto);
+                position: relative;
+                #contentInput{
+                    @include size($wd:25vw, $ht:3.5vw);
+                    @include flex($jc:start);
+                    background-color: #fff;
+                    border-radius: 2vw;
+                    padding-right: 1vw;
+
+                    #contentIcone{
+                        @include size($wd:15%);
+                        @include flex();
+
+                        #iconeSearch{
+                            color: $gris5;
+                        }
+                    }
+                    input{
+                        @include input($wd:85%);
+                        border:none;
+                        padding: 0;
+                    }
+                }
+
+                .content_search{
+                    width: 100%;
+                    height: auto;
+                    position: absolute;
+                    background-color: #fff;
+                    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+                    padding: 1.5vw;
+                    visibility: hidden;
+                    opacity: 0;
+
+                    .liste{
+                        padding: 0.5vw;
+                        list-style-type: none;
+                        color: #303030;
+                        cursor: pointer;
+                    }
+                    .liste:hover{
+                        background-color: #12121259;
+                    }
+                }
+                .content_search.active{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
+            #btnAdd{
+                @include size($wd:auto, $ht:3.5vw);
+                @include button($bg:$loko3, $pd:0.5vw 1.5vw, $brad:2vw);
+                gap: 0.5vw;
+            }
+        }
+    }
+    #bodyProduit{
+        @include size($ht:auto);
+        @include flex($jc:start, $al:start, $gp:1vw, $fw:wrap);
+    }
+}

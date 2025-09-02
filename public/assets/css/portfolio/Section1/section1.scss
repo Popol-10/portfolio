@@ -1,0 +1,123 @@
+
+@import "../../library/layout/layout.scss";
+
+@include Police();
+
+#section1 {
+  @include size($wd: 100vw, $ht: 45vw);
+  @include flex($jc: space-around);
+  padding-top: 8vw;
+
+  #ContainerS {
+    @include size($wd: 30vw, $ht: 35vw);
+    padding: 1vw;
+
+    img {
+      @include size($wd: 20vw, $ht: 20vw);
+      box-shadow: 0 0 3vw rgb(133, 75, 75);
+      border-radius: 50vw;
+      border: rgb(133, 75, 75) solid 0.2vw;
+      margin-left: 4vw;
+      opacity: 0;
+      animation: fadeIn 2s ease-out forwards;
+    }
+
+    h1 {
+      font-size: 3vw;
+      color: rgb(133, 75, 75);
+      text-align: center;
+    }
+
+    #devT {
+      font-size: 2vw;
+      text-align: center;
+      color: beige;
+      text-transform: uppercase;
+
+      .cursor {
+        display: inline-block;
+        margin-left: 2px;
+        animation: blink 1s infinite;
+      }
+    }
+  }
+
+  #Container2 {
+    @include size($wd: 40vw, $ht: 35vw);
+    padding: 1vw;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+
+    h3 {
+      font-size: 2vw;
+      text-align: center;
+      margin-bottom: 1vw;
+      color: rgb(133, 75, 75);
+
+      span {
+        text-transform: uppercase;
+      }
+    }
+
+    p {
+      font-family: "Segoe UI";
+      font-size: 1.3vw;
+      color: beige;
+    }
+  }
+}
+
+
+
+@include mobile {
+  #section1 {
+    height: auto;
+    padding-top: 5vw;
+    @include flexColumn($jc:center, $ac:center);
+
+    #ContainerS,
+    #Container2 {
+      width: 95vw;
+      height: auto;
+    }
+
+    #ContainerS {
+      img {
+        width: 50vw;
+        height: 50vw;
+        margin-left: 22vw;
+      }
+      h1 {
+        font-size: 5vw;
+      }
+      #devT {
+        font-size: 4vw;
+      }
+    }
+
+    #Container2 {
+      h3 {
+        font-size: 3.5vw;
+      }
+      p {
+        font-size: 2.8vw;
+        text-align: left;
+        margin-left: 5vw;
+      }
+    }
+  }
+}
+
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

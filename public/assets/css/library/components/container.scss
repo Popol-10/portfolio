@@ -1,0 +1,10 @@
+@import "../../library/layout/layout.scss";
+
+@include Police();
+
+@mixin container ($ht:auto, $pd:4vw){
+    @include size($ht:$ht);
+    padding: $pd;
+
+    @content;
+}

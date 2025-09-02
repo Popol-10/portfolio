@@ -1,0 +1,9 @@
+@import "../library/layout/layout.scss";
+
+@include Police();
+
+#pageProfil{
+    @include size($ht:auto);
+    @include flexColumn($gp:2vw);
+    padding: 0vw 2vw 2vw 2vw;
+}

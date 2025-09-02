@@ -1,0 +1,360 @@
+@font-face {
+  font-family: "Light";
+  src: url("../../fonts//Inter-Light.ttf");
+}
+
+@font-face {
+  font-family: "ExtraLight";
+  src: url("../../fonts//Inter-ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: "SemiBold";
+  src: url("../../fonts//Inter-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "ExtraBold";
+  src: url("../../fonts//Inter-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Medium";
+  src: url("../../fonts//Inter-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Thin";
+  src: url("../../fonts//Inter-Thin.ttf");
+}
+
+@font-face {
+  font-family: "Black";
+  src: url("../../fonts//Inter-Black.ttf");
+}
+
+* {
+  font-family: "MaPolice";
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.error {
+  color: #ff1d58;
+  font-weight: 500;
+  font-family: "medium";
+}
+
+.aucune {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+}
+
+.aucune p {
+  font-weight: 500;
+  font-family: "medium";
+  color: #0049b765;
+}
+
+@font-face {
+  font-family: "MaPolice";
+  src: url("../../fonts//Inter-Regular.ttf");
+}
+
+.modalDelete {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: inherit;
+  right: inherit;
+  top: inherit;
+  bottom: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  position: fixed;
+  z-index: 20;
+  visibility: hidden;
+  -webkit-transition: visibility 0.3s;
+  transition: visibility 0.3s;
+}
+
+.modalDelete .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #333333d3;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: all 0.3s 0.2s ease-out;
+  transition: all 0.3s 0.2s ease-out;
+}
+
+.modalDelete .modal {
+  width: 25%;
+  height: auto;
+  border-radius: 10px;
+  background-color: #fff;
+  position: relative;
+  margin-top: 4vw;
+  border-radius: 1.2vw;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  -webkit-transform: translateY(-4vw);
+          transform: translateY(-4vw);
+  padding: 1vw;
+}
+
+.modalDelete .modal #headDel {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  padding: 1vw;
+}
+
+.modalDelete .modal #headDel #titre {
+  font-size: 1.2vw;
+  font-family: "medium";
+  font-weight: 500;
+}
+
+.modalDelete .modal #headDel .btnClose {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1vw;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .modalDelete .modal #headDel .btnClose {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+.modalDelete .modal #headDel .btnClose svg {
+  width: 1.5vw;
+  height: 100%;
+}
+
+.modalDelete .modal #headDel .btnClose svg path {
+  fill: #303030;
+}
+
+.modalDelete .modal #bodyDel {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1vw;
+  padding: 1vw;
+}
+
+.modalDelete .modal #bodyDel #IconeDelete {
+  width: 4vw;
+  height: 4vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  border-radius: 50%;
+  background-color: #F7F7F7;
+}
+
+.modalDelete .modal #bodyDel #contentMessage {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+}
+
+.modalDelete .modal #bodyDel #contentMessage #message {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.4vw;
+  color: #565360;
+}
+
+.modalDelete .modal #footDel {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.5vw;
+  padding: 1vw;
+}
+
+.modalDelete .modal #footDel .btn {
+  padding: 1vw 3vw;
+  margin: 0;
+  border: none;
+  border-radius: 1vw;
+  color: #303030;
+  font-size: 1vw;
+  background-color: #2C7865;
+  cursor: pointer;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .modalDelete .modal #footDel .btn {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+.modalDelete .modal #footDel .btnDel {
+  background-color: #ff1d58;
+  color: #fff;
+}
+
+.modalDelete .modal #footDel .btnAnn {
+  background-color: #F7F7F7;
+  color: #303030;
+}
+
+.modalDelete.active .overlay {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.modalDelete.active .modal {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+/*# sourceMappingURL=modalDelete.css.map */

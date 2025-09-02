@@ -1,0 +1,248 @@
+@import "../../library/layout/layout.scss";
+// @import "../../../../imageSlide/Layer\ 4.png";
+@include Police();
+
+#Contact{
+    @include size($wd:100vw,$ht:32vw);
+    @include bgImage($img:"../../../../imageSlide/Layer\ 4.png");
+    background-attachment: fixed;
+    .contactd{
+        @include size($wd:100vw,$ht:32vw);
+        background-color: rgba(0, 0, 0, 0.527);
+        h2{
+            padding-top: 1vw;
+            font-size: 2.2vw;
+            color: rgb(133, 75, 75);
+            width: 100vw;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        #contactd2{
+            @include size($wd:80vw,$ht:25vw);
+            @include flex($jc:space-around);
+            // background: #e0d7d7;
+            margin-left: 10vw;
+            .contactd2{
+                @include size($wd:35vw,$ht:20vw);
+                background: #493030a6;
+                border-radius: 1vw;
+                
+                form{
+                    @include size($wd:33vw,$ht:20vw);
+                    margin-left: 3.5vw;
+                    padding: 1vw; 
+                    @include flexColumn($jc:space-around);
+                    input{
+                        width: 26vw;
+                        height: 2.5vw;
+                        border-radius:.5vw;
+                        font-size: 1.2vw;
+                        border: none;
+                        color: black;
+                        background: rgba(255, 255, 255, 0.582);
+                        padding: 1vw;
+                    }
+                    textarea{
+                        width: 26vw;
+                        height: 7vw;
+                        font-size: 1.2vw;
+                        color: black ;
+                        border-radius: 1vw;
+                        padding: 1vw;
+                        border: none;
+                        background: rgba(255, 255, 255, 0.582);
+
+                    }
+                    button{
+                        @include size($wd:7vw,$ht:2.5vw);
+                        @include button($hover-bg:rgba(255, 255, 255, 0.582),$fs:1.2vw, $bg:rgb(61, 17, 17));
+                        font-weight: bold;
+                        margin-left: 10vw;
+                        &:hover{
+                            color: black;
+                        }
+                    }
+                }
+                .contlogo{
+                    @include size($wd:30vw,$ht:16vw);
+                    @include flexColumn($jc:space-around);
+                    padding: 1vw;
+                    .phone{
+                        width: 20vw;
+                        height: 4vw;
+                        @include flex();
+                        padding: 2vw;
+                        .phone2{
+                            width:3vw ;
+                            height: 3vw;
+                            // color: red;
+                            img{
+                                @include size($wd:2vw,$ht:2vw)
+                            }
+                        }
+                        .mail{
+                            width: 13vw;
+                            height: 3vw;
+                            // background: #e49c9c;
+                            h5{
+                                font-size: 1.5vw;
+                                color: rgb(5, 5, 5);
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media (max-width:923px){
+    #Contact{
+        width: 100vw;
+        height: auto;
+        .contactd{
+            width: 100vw;
+            height: auto;
+            h2{
+                font-size: 3.5vw;
+            }
+            #contactd2{
+                width: 80vw;
+                height: auto;
+                @include flexColumn();
+
+                
+                 .contactd2{
+                    width: 70vw;
+                    height: auto;
+                    margin: 2vw auto;
+                    form{
+                        width: 60vw;
+                        height: 30vw;
+                        input{
+                            width: 61vw;
+                            height: 4vw;
+                            padding: 2vw;
+                            font-size: 2vw;
+                        }
+                        textarea{
+                            width: 61vw;
+                            height: 10vw;
+                            font-size: 2vw;
+                            overflow-y: auto;
+                        }
+                        button{
+                            width: 20vw;
+                            height: 4vw;
+                            font-size: 2vw;
+                            margin: 0 auto;
+                        }
+                    }
+                    .contlogo{
+                       width: 70vw;
+                       height: auto;
+                    //    margin: 2vw auto;
+                    // background: gray;
+                        .phone{
+                           width: 60vw;
+                           height: auto;
+                        //    background: yellow;
+                           margin-left: -1vw;
+                           
+                           .phone2{
+                                width:7vw;
+                                // background: #922e2e;
+                                img{
+                                    width: 3.5vw;
+                                    height: 3.5vw;
+                                }
+                           }
+                           .mail{
+                                width: 35vw;
+                                // background: #922e2e;
+                               h5{
+                                    font-size: 3vw;
+                               }
+                           }
+                        }
+   
+                    }
+                 }
+            }
+        }
+    }
+
+}
+@include mobile{
+    #Contact{
+        width: 100vw;
+        height: auto;
+        .contactd{
+            width: 100vw;
+            height: auto;
+            h2{
+                font-size: 4vw;
+            }
+            #contactd2{
+                 .contactd2{
+                    width: 70vw;
+                    height: auto;
+                    margin: 2vw auto;
+                    form{
+                        width: 61vw;
+                        height: auto;
+                        // background: gray;
+                        input{
+                            width: 61vw;
+                            height: auto;
+                            padding: 2vw;
+                            font-size: 2vw;
+                            margin: 1vw auto;
+                        }
+                        textarea{
+                            width: 61vw;
+                            height: 10vw;
+                            font-size: 2vw;
+                            overflow-y: auto;
+                        }
+                        button{
+                            width: 15vw;
+                            height: 7vw;
+                            font-size: 2vw;
+                            margin: 1vw auto;
+                        }
+                    }
+                    .contlogo{
+                       width: 70vw;
+                       height: auto;
+                    //    margin: 2vw auto;
+                    // background: gray;
+                        .phone{
+                           width: 60vw;
+                           height: auto;
+                        //    background: yellow;
+                           margin-left: -1vw;
+                           
+                           .phone2{
+                                width:7vw;
+                                // background: #922e2e;
+                                img{
+                                    width: 3.5vw;
+                                    height: 3.5vw;
+                                }
+                           }
+                           .mail{
+                                width: 35vw;
+                               h5{
+                                    font-size: 3vw;
+                               }
+                           }
+                        }
+   
+                    }
+                 }
+            }
+        }
+    }
+}

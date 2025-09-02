@@ -1,0 +1,112 @@
+@import "../library/layout/layout.scss";
+
+@include Police();
+
+.modalDelete{
+    @include size();
+    @include position($ps:fixed);
+    @include flex($al:start);
+    position: fixed;
+    z-index: 20;
+    visibility: hidden;
+    transition: visibility 0.3s;
+    .overlay{
+        @include size();
+        position: absolute;
+        background-color: #333333d3;
+        z-index: -1;
+        opacity: 0;
+        transition: all 0.3s 0.2s ease-out;
+    }
+    .modal{
+        @include modal($wd:25%);
+        position: relative;
+        margin-top: 4vw;
+        border-radius: 1.2vw;
+        opacity: 0;
+        visibility: hidden;
+        transition:all 0.4s ease-out;
+        transform: translateY(-4vw);
+        padding: 1vw;
+
+        #headDel{
+            @include size($ht:auto);
+            @include flex($jc:space-between);
+            padding: 1vw;
+
+            #titre{
+                font-size: 1.2vw;
+                font-family: "medium";
+                font-weight: 500;
+            }
+
+            .btnClose{
+                @include size($ht:auto, $wd:auto);
+                @include button($bg:transparent, $pd:0);
+                svg{
+                    @include size($wd:1.5vw);
+                    path{
+                        fill: #303030;
+                    }
+                }
+                cursor: pointer;
+            }
+        }
+        #bodyDel{
+            @include size($ht:auto);
+            @include flexColumn($gp:1vw, $al:center, $jc:center);
+            padding: 1vw;
+
+            #IconeDelete{
+                @include size($ht:4vw, $wd:4vw);
+                @include flex();
+                border-radius: 50%;
+                background-color: $gris;
+            }
+
+            #contentMessage{
+                @include size($ht:auto);
+                @include flex();
+                #message{
+                    font-size: 14px;
+                    font-weight: 500;
+                    text-align: center;
+                    line-height: 1.4vw;
+                    color: $gris5;
+                }
+            }
+                
+        }
+        #footDel{
+            @include size($ht:auto);
+            @include flex($gp:0.5vw);
+            padding: 1vw;
+
+            .btn{
+                @include button($bg:$green, $pd:1vw 3vw, $brad:1vw, $col:#303030);
+                @include size($ht:auto);
+            }
+
+            .btnDel{
+                background-color: $loko5;
+                color: #fff;
+            }
+
+            .btnAnn{
+                background-color: $gris;
+                color: #303030;
+            }
+        }
+    }
+}
+.modalDelete.active .overlay{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.4s;
+}
+.modalDelete.active .modal{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.4s;
+    transform: translate(0);
+}

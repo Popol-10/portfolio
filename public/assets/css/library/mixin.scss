@@ -1,0 +1,448 @@
+@mixin bodyMarge(){
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@mixin font($col:#000, $size:inherit, $weight:bold, $style:normal){
+    color: $col;
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
+}
+
+
+@mixin flex(
+  $dsp: flex,
+  $jc: center,
+  $al: center,
+  $fd: row,
+  $gp: 0,
+  $fw: null,
+  $ai: null,
+  $ac: null,
+  $as: null,
+  $ff: null,
+  $fl: null,
+  $fg: null,
+) {
+  display: $dsp;
+  justify-content: $jc;
+  align-items: $al;
+  flex-direction: $fd;
+  gap: $gp;
+
+  @if $fw {
+    flex-wrap: $fw;
+  }
+  @if $ai {
+    align-items: $ai;
+  }
+  @if $ac {
+    align-content: $ac;
+  }
+  @if $as {
+    align-self: $as;
+  }
+  @if $ff {
+    flex-flow: $ff;
+  }
+  @if $fl {
+    flex: $fl;
+  }
+  @if $fg {
+    flex-grow: $fg;
+  }
+}
+
+@mixin flexColumn(
+  $dsp: flex,
+  $jc: flex-start,
+  $al: flex-start,
+  $gp: 0,
+  $fw: null,
+  $ai: null,
+  $ac: null,
+  $as: null,
+  $ff: null,
+  $fl: null
+) {
+  display: $dsp;
+  justify-content: $jc;
+  align-items: $al;
+  flex-direction: column;
+  gap: $gp;
+
+  @if $fw {
+    flex-wrap: $fw;
+  }
+  @if $ai {
+    align-items: $ai;
+  }
+  @if $ac {
+    align-content: $ac;
+  }
+  @if $as {
+    align-self: $as;
+  }
+  @if $ff {
+    flex-flow: $ff;
+  }
+  @if $fl {
+    flex: $fl;
+  }
+}
+
+@mixin size(
+  $wd: 100%,
+  $ht: 100%,
+  $min-wd: null,
+  $max-wd: null,
+  $min-ht: null,
+  $max-ht: null
+) {
+  width: $wd;
+  height: $ht;
+
+  @if $min-wd {
+    min-width: $min-wd;
+  }
+  @if $max-wd {
+    max-width: $max-wd;
+  }
+  @if $min-ht {
+    min-height: $min-ht;
+  }
+  @if $max-ht {
+    max-height: $max-ht;
+  }
+}
+@mixin lien(
+  $col: black,
+  $fs: 13px,
+  $hover-col: null,
+  $hover-td: null,
+  $active-col: null,
+  $active-td: null
+) {
+  text-decoration: none;
+  color: $col;
+  font-size: $fs;
+
+  &:hover {
+    @if $hover-col {
+      color: $hover-col;
+    }
+    @if $hover-td {
+      text-decoration: $hover-td;
+    }
+  }
+
+  &:active {
+    @if $active-col {
+      color: $active-col;
+    }
+    @if $active-td {
+      text-decoration: $active-td;
+    }
+  }
+}
+@mixin button(
+  $bg: #1746A2,
+  $col: #fff,
+  $fs: 1vw,
+  $brad: 5px,
+  $pd: 0.5vw,
+  $mg: 0,
+  $bd: none,
+  $box-shadow: none,
+  $hover-bg: null,
+  $hover-col: null,
+  $active-bg: null,
+  $active-col: null,
+  $gp: 0
+) {
+  padding: $pd;
+  margin: $mg;
+  border: $bd;
+  border-radius: $brad;
+  color: $col;
+  font-size: $fs;
+  background-color: $bg;
+  cursor: pointer;
+  box-shadow: $box-shadow;
+
+  @include flex($gp: $gp);
+
+  &:hover {
+    @if $hover-bg {
+      background-color: $hover-bg;
+    }
+    @if $hover-col {
+      color: $hover-col;
+    }
+  }
+
+  &:active {
+    @if $active-bg {
+      background-color: $active-bg;
+    }
+    @if $active-col {
+      color: $active-col;
+    }
+  }
+  
+  @include mobile {
+    flex-grow: 1;
+  }
+}
+
+@mixin btnIcone($bg:#fff, $col:#1746A2, $pd:1px, $brad:3px, $fs:1vw){
+    background-color: $bg;
+    color: $col;
+    padding: $pd;
+    border-radius: $brad;
+    font-size: $fs;
+}
+@mixin input($wd:100%, $ht:3vw, $bradius:5px){
+    width: $wd;
+    height: $ht;
+    padding:0 1vw;
+    border: 1px solid #c9c7c7;
+    border-radius: $bradius;
+    outline: none;
+    @include flex($jc:start);
+}
+@mixin image($wd:100%, $ht:auto){
+    width: $wd;
+    height: $ht;
+    object-fit: cover;
+}
+@mixin bgImage($img){
+    background-image: url($img);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@mixin section($ht:auto, $pd:0, $ps:static,$wd:100%){
+    position: $ps;
+    width: $wd;
+    height: $ht;
+    padding: $pd;
+}
+@mixin modalContainer($disp:flex, $jc:center, $al:center){
+    position: fixed;
+    display: $disp;
+    justify-content: $jc;
+    align-items: $al;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 900;
+}
+@mixin modal($wd:30%, $ht:auto, $bradius:10px){
+    width: $wd;
+    height: $ht;
+    border-radius: $bradius;
+    background-color: #fff;
+}
+@mixin modalHead($ht:auto, $pd:0.5vw 1vw, $brColor:rgba(0,0,0,0.2)){
+    width: 100%;
+    height: $ht;
+    padding: $pd;
+    border-bottom: 1px solid $brColor;
+}
+@mixin modalBody($ht:auto, $pd:0.5vw 1vw, $brColor:rgba(0,0,0,0.2)){
+    width: 100%;
+    height: $ht;
+    padding: $pd;
+    border-bottom: 1px solid $brColor;
+}
+@mixin modalFoot($pd:0.5vw 1vw, $ht:auto){
+    width: 100%;
+    height: $ht;
+    padding: 0.5vw 1vw;
+}
+@mixin modalAnim($op, $vis, $sl, $trans){
+    opacity: $op;
+    visibility: $vis;
+    transform: translateY($sl);
+    transition: all $trans;
+}
+@mixin before($bg:#fff, $wd:100%, $ht:100%, $tp:0, $lf:0, $zi:-1){
+    &::before{
+        content: "";
+        position: absolute;
+        top:$tp;
+        left:$lf;
+        width: $wd;
+        height: $ht;
+        background-color: $bg;
+        z-index: $zi;
+    }
+}
+@mixin before2($bg:#fff, $wd:100%, $ht:100%, $tp:0, $lf:0, $zi:-1){
+    content: "";
+    position: absolute;
+    top:$tp;
+    left:$lf;
+    width: $wd;
+    height: $ht;
+    background-color: $bg;
+    z-index: $zi;
+}
+@mixin after($bg:#fff, $wd:100%, $ht:100%, $tp:0, $rt:0, $zi:-1){
+    &::after{
+        content: "";
+        position: absolute;
+        top:$tp;
+        right:$rt;
+        width: $wd;
+        height: $ht;
+        background-color: $bg;
+        z-index: $zi;
+    }
+}
+@mixin after2($bg:#fff, $wd:100%, $ht:100%, $tp:0, $rt:0, $zi:-1){
+    content: "";
+    position: absolute;
+    top:$tp;
+    right:$rt;
+    width: $wd;
+    height: $ht;
+    background-color: $bg;
+    z-index: $zi;
+}
+@mixin instantane($btt:0, $rgt:-0.1vw){
+    @include size($wd:0.8vw, $ht:0.8vw); 
+    position: absolute;
+    right: $rgt;
+    bottom: $btt;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: #2F9A48;
+    z-index: 1;
+}
+@mixin position($ps:static, $lf:inherit, $rgt:inherit, 
+$top:inherit, $btt:inherit){
+    position: $ps;
+    left: $lf;
+    right: $rgt;
+    top: $top;
+    bottom: $btt;
+}
+@mixin bouttonEffet1($bg:#25537E, $wd:100%, $ht:100%, $trans:translateY(100%), $transi:0.3s){
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $wd;
+        height: $ht;
+        background-color: $bg;
+        z-index: -1;
+        transform: $trans;
+        transition: $transi;
+    }
+}
+@mixin photo($wd:3vw, $ht:3vw, $border:#ececec, $brad:50%, $ovf:hidden){
+    width: $wd;
+    height: $ht;
+    border-radius: $brad;
+    overflow: $ovf;
+    border:1px solid $border;
+}
+@mixin img($brad:50%){
+    width: 100%;
+    height: 100%;
+    border-radius: $brad;
+    object-fit: cover;
+}
+@mixin content($pd:2vw, $jc:start, $gp:0, $bg:#fff){
+    padding: $pd;
+    display: flex;
+    justify-content: $jc;
+    align-items: center;
+    gap: $gp;
+    background-color: #fff;
+}
+@mixin border($size:1px, $col:#ccc, $brad:0, $ps:none){
+    @if($ps == none){
+        border: $size solid $col;
+        border-radius: $brad;
+    }
+    @else if($ps == right){
+        border-right: $size solid $col;
+        border-radius: $brad;
+    }
+    @else if($ps == left){
+        border-left: $size solid $col;
+        border-radius: $brad;
+    }
+    @else if($ps == top){
+        border-top: $size solid $col;
+        border-radius: $brad;
+    }
+    @else if($ps == bottom){
+        border-bottom: $size solid $col;
+        border-radius: $brad;
+    }
+}
+@mixin posCenter(){
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin shadow($x:0, $y:0, $z:10px, $col:#ccc){
+    box-shadow: $x $y $z $col;
+}
+@mixin center(){
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+@mixin formGroup($gp:0){
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap:$gp;
+}
+
+@mixin modeSombre($bg:rgba(0,0,0,0.5)){
+  &::after{
+    content: "";
+    @include position($ps:absolute, $top:0, $lf:0);
+    @include size();
+    background-color: $bg;
+    z-index: -1;
+  }
+}
+
+@mixin mobile(){
+  @media (max-width:768px) {
+    @content;
+  }
+}
+
+@mixin tablet(){
+  @media (max-width: 922px){
+    @content;
+  }
+}
+
+@mixin desktop(){
+  @media (min-width: 923px) {
+    @content;
+  }
+}
+
+@mixin largeDesktop(){
+  @media (min-width: 1300px) and (max-height: 768px){
+    @content
+  }
+}

@@ -1,0 +1,108 @@
+@import "../library/layout/layout.scss";
+$shadow : 0 1px 5px $shadow1;
+
+@include Police();
+
+#navigation{
+    @include size($ht:92.7%);
+    @include flexColumn();
+    nav{
+        @include size($ht:100%);
+        overflow: auto;
+        .content-nav{
+            @include size($ht:auto);
+            @include flexColumn($gp:1vw);
+            list-style: none;
+            padding: 1vw 0;
+            
+            .liste{
+                @include size($ht:3.5vw);
+                padding: 0 1vw;
+                transition:0.3s;
+                a{
+                    @include size();
+                    @include lien($col:#ffffff9c, $fs:1.1vw);
+                    @include flex($jc:start, $gp:1vw);
+                    border-radius: 3px;
+                    padding: 0 1vw;
+                    #image{
+                        border-radius: 5px;
+                        padding: 0.5vw;
+                    }
+                    &:hover{
+                        background-color: $hover;
+                        color:#fff;
+                        i{
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            .drop{
+                @include size($ht:auto);
+                @include flexColumn();
+                padding: 0 1vw;
+                overflow: hidden;
+                .nom-drop{
+                    @include size($ht:3.5vw);
+                    @include lien($col:#333, $fs:1.1vw);
+                    @include flex($jc:start, $gp:0.5vw);
+                    border-radius: 3px;
+                    transition:0.3s;
+                    cursor: pointer;
+                    i{
+                        @include size($wd:21%);
+                        @include flex();
+                        color: $loko1;
+                    }
+                    &:hover{
+                        background-color: $loko1;
+                        color: #fff;
+                        i{
+                            color: #fff;
+                        }
+                    }
+                    span{
+                        @include size($wd:80%);
+                        @include flex($jc:start);
+                    }
+                    .angle{
+                        transition: 0.5s;
+                    }
+                    .angle.rotate{
+                        transition:0.5s;
+                        transform: rotate(450deg);
+                    }
+                }
+                ul{
+                    @include size($ht:auto, $wd:80%);
+                    list-style-type: none;
+                    align-self: flex-end;
+                    border-left: 1px solid $loko1;
+                    display: none;
+                    li{
+                        @include size($ht:2.5vw);
+                        transition: 0.3s;
+                        padding: 0 1vw;
+                        a{
+                            @include size();
+                            @include lien($col:#333, $fs:1vw);
+                            @include flex($jc:start, $gp:0.5vw);
+                        }
+                        &:hover{
+                            background-color: $gris;
+                            color: #fff;
+                            i{
+                                color: #fff;
+                            }
+                            a{
+                                color: $loko1;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

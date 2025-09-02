@@ -1,0 +1,109 @@
+@import "../library/layout/layout.scss";
+
+@include Police();
+
+#profil{
+    @include section();
+    @include flexColumn($gp:1.5vw);
+    overflow: auto;
+
+    #bodyProfil{
+        @include size();
+        @include flex($gp:1vw, $al:start);
+        
+        #contentPhoto{
+            @include size($wd:30%, $ht:auto);
+            @include flexColumn($al:center, $gp:2vw);
+            padding: 2vw;
+            border-radius: 1vw;
+            background-color: #fff;
+
+            #contentImage{
+                @include size($wd:10vw, $ht:10vw);
+                img{
+                    @include img();
+                }
+            }
+
+            #contentAction{
+                @include size($ht:auto);
+                @include flexColumn($gp:0.5vw);
+
+                .btn{
+                    @include button($pd:1vw 0.5vw, $col:#121212);
+                    @include size($ht:auto);
+                    @include border($col:$lavande, $brad:0.3vw);
+                    background-color: #fff;
+                    
+                    &:hover{
+                        background-color: $gris;
+                    }
+                }
+            }
+        }
+
+        #contentInfos{
+            @include size($wd: 70%, $ht:auto);
+            @include flexColumn();
+            background-color: #fff;
+            border-radius: 1vw;
+            padding: 2vw;
+
+            #headContent{
+                @include size($ht:auto);
+                @include flex($jc:start);
+                padding-bottom: 1.5vw;
+
+                #titre{
+                    font-size: 1.1vw;
+                    font-family: "medium";
+                    font-weight: 500;
+                    color: #121212;
+                }
+            }
+
+            #bodyContent{
+                @include size($ht:auto);
+                @include flex($jc:space-between, $fw:wrap, $gp:1vw);
+
+                .infos{
+                    @include size($wd:48.8%);
+                    @include flex($jc:start);
+                    @include border($col:$lavande, $brad:0.3vw);
+                    padding: 1vw 0.5vw;
+
+                    #contentIcone{
+                        @include size($wd:15%);
+                        @include flex();
+                    }
+                    #text{
+                        @include size($wd:85%);
+                        font-size: 1vw;
+                        font-family: "medium";
+                        color: $gris5;
+
+                    }
+                }
+
+                .bio{
+                    @include size($ht:auto);
+                    @include flexColumn($gp:0.5vw);
+                    border: none;
+                    padding: 0;
+
+                    label{
+                        font-size: 1vw;
+                        font-family: "medium";
+                        color: #121212;
+                    }
+
+                    #text{
+                        @include size($ht:15vw);
+                        @include border($col:$lavande, $brad:0.3vw);
+                        padding: 1vw;
+                    }
+                }
+            }
+        }
+    }
+}

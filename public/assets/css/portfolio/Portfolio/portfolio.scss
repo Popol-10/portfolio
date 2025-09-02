@@ -1,0 +1,148 @@
+@import "../../library/layout/layout.scss";
+@include Police();
+#portfolio{
+    @include size($wd:100vw,$ht:66vw);
+    // margin: 0;
+    background: #ad575734;
+    @include flexColumn();
+    padding-top: 2vw;
+    h2{
+        width: 100vw;
+        font-size: 2.2vw;
+        color: rgb(133, 75, 75);
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 1vw;
+    }
+    .portfolio1{
+        @include size($wd:90vw,$ht:30vw);
+        @include flex($jc:space-around);
+        margin-left: 5vw;
+        .port1{
+            width: 44vw;
+            height: 29vw;
+            border-radius: 1vw;
+            background: rgba(236, 240, 230, 0.664);
+            padding: 1vw;
+            img{
+                width: 44vw;
+                height: 18vw;
+                border-radius: 1.2vw 1.2vw 0 0;
+                margin-left: -1vw;
+                margin-top: -1vw;
+            }
+            h3{
+                font-size: 1.4vw;
+            }
+            p{
+                font-size: 1.2vw;
+                height: 3.5vw;
+                overflow-y: auto;
+            }
+            .port1a{
+                width: 33vw;
+                height: 3vw;
+                @include flex($jc:space-around);
+
+                h4{
+                    font-size: 1.3vw;
+                    color: rgb(134, 56, 56);
+                    background: rgba(62, 182, 212, 0.274);
+                    border-radius: .5vw;
+                    padding: .5vw;
+                }
+            }
+            .button{
+                @include button($bg:transparent);
+                font-size: 1.5vw;
+                @include size($wd:15vw,$ht:3vw);
+                color: rgb(134, 56, 56);
+                font-weight: bold;
+                text-decoration: none;
+
+                img{
+                    width: 5vw;
+                    height: 2vw;
+                    margin-top: .5vw;
+                    margin-left: .5vw;
+                }
+                &:hover{
+                    // background: #8f8181;
+                    color: black;
+                    width: 16vw;
+
+                    img{
+                        margin-left: 1vw;
+                    }
+                }
+            }
+
+        }
+
+        
+    }
+
+}
+@media (max-width: 923px){
+    #portfolio{
+        width: 100vw;
+        height: auto;
+        h2{
+            font-size: 3.5vw;
+        }
+        .portfolio1{
+            width: 95vw;
+            height: auto;
+            flex-direction: column;
+            .port1{
+                width: 70vw;
+                height: 60vw;
+                margin-top: 2vw;
+                img{
+                    width: 70vw;
+                    height: 35vw;
+                }
+                h3{
+                    font-size: 3.5vw;
+                }
+                p{
+                    font-size: 2.3vw;
+                    height: 10vw;
+                }
+                .port1a{
+                    width: auto;
+                    height: auto;
+                    h4{
+                        font-size: 2.5vw;
+                        &:hover{
+                            background: rgb(134, 56, 56);
+                            color: black;
+                        }
+                    }
+                }
+                .button{
+                    font-size: 2.5vw;
+                    margin-top: 1vw;
+                    width: 25vw;
+                    height: auto;
+                    img{
+                        width: 7vw;
+                    }
+                    &:hover{
+                        width: 32vw;
+                        img{
+                            width: 9vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include mobile{
+    #portfolio{
+        h2{
+            font-size: 5vw;
+        }
+    }
+}

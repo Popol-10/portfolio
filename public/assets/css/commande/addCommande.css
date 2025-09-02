@@ -1,0 +1,612 @@
+@font-face {
+  font-family: "Light";
+  src: url("../../fonts//Inter-Light.ttf");
+}
+
+@font-face {
+  font-family: "ExtraLight";
+  src: url("../../fonts//Inter-ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: "SemiBold";
+  src: url("../../fonts//Inter-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "ExtraBold";
+  src: url("../../fonts//Inter-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Medium";
+  src: url("../../fonts//Inter-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Thin";
+  src: url("../../fonts//Inter-Thin.ttf");
+}
+
+@font-face {
+  font-family: "Black";
+  src: url("../../fonts//Inter-Black.ttf");
+}
+
+* {
+  font-family: "MaPolice";
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.error {
+  color: #ff1d58;
+  font-weight: 500;
+  font-family: "medium";
+}
+
+.aucune {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+}
+
+.aucune p {
+  font-weight: 500;
+  font-family: "medium";
+  color: #0049b765;
+}
+
+@font-face {
+  font-family: "MaPolice";
+  src: url("../../fonts//Inter-Regular.ttf");
+}
+
+.modalAddCom {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: inherit;
+  right: inherit;
+  top: inherit;
+  bottom: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  position: fixed;
+  z-index: 20;
+  visibility: hidden;
+  -webkit-transition: visibility 0.3s;
+  transition: visibility 0.3s;
+}
+
+.modalAddCom .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #333333d3;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: all 0.3s 0.2s ease-out;
+  transition: all 0.3s 0.2s ease-out;
+}
+
+.modalAddCom .modal {
+  width: 32%;
+  height: auto;
+  border-radius: 10px;
+  background-color: #fff;
+  position: relative;
+  margin-top: 4vw;
+  padding: 2.1vw;
+  border-radius: 1.2vw;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  -webkit-transform: translateY(-4vw);
+          transform: translateY(-4vw);
+}
+
+.modalAddCom .modal #headModal {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  border-bottom: 1px solid #E9ECEF;
+  border-radius: 0;
+  padding-bottom: 1vw;
+}
+
+.modalAddCom .modal #headModal #contentTitre {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+}
+
+.modalAddCom .modal #headModal #contentTitre #titre {
+  font-size: 1.2vw;
+  font-family: "SemiBold";
+  font-weight: 500;
+  color: #303030;
+}
+
+.modalAddCom .modal #headModal #contentTitre .btnClose {
+  padding: 0.5vw;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1vw;
+  background-color: #F7F7F7;
+  cursor: pointer;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  width: 2.5vw;
+  height: 2.5vw;
+}
+
+@media (max-width: 768px) {
+  .modalAddCom .modal #headModal #contentTitre .btnClose {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+.modalAddCom .modal #headModal #contentTitre .btnClose .icone {
+  font-size: 1.3vw;
+  color: #F44336;
+}
+
+.modalAddCom .modal #headModal #contentTitre .btnClose:hover {
+  background-color: #E9ECEF;
+}
+
+.modalAddCom .modal #bodyModal {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1vw;
+  padding: 1.5vw 0;
+}
+
+.modalAddCom .modal #bodyModal #formGroup {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5vw;
+  position: relative;
+}
+
+.modalAddCom .modal #bodyModal #formGroup label {
+  font-size: 1vw;
+  color: #303030;
+}
+
+.modalAddCom .modal #bodyModal #formGroup #contentInput {
+  width: 100%;
+  height: 3.8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  border-radius: 0.5vw;
+  background-color: #F7F7F7;
+}
+
+.modalAddCom .modal #bodyModal #formGroup #contentInput #contentIcone {
+  width: 15%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+}
+
+.modalAddCom .modal #bodyModal #formGroup #contentInput input {
+  width: 88%;
+  height: 3vw;
+  padding: 0 1vw;
+  border: 1px solid #c9c7c7;
+  border-radius: 5px;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  background-color: transparent;
+  border: none;
+  color: #303030;
+  padding: 1vw;
+  padding-left: 0;
+}
+
+.modalAddCom .modal #bodyModal #formGroup #contentInput select {
+  width: 88%;
+  height: 3vw;
+  padding: 0 1vw;
+  border: 1px solid #c9c7c7;
+  border-radius: 5px;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  background-color: transparent;
+  border: none;
+  color: #303030;
+  padding: 1vw;
+  padding-left: 0;
+  cursor: pointer;
+}
+
+.modalAddCom .modal #bodyModal #formGroup #contentInput select option {
+  background-color: #ffff;
+}
+
+.modalAddCom .modal #bodyModal #formGroup #contentInput #unite {
+  width: 12%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  color: #565360;
+}
+
+.modalAddCom .modal #bodyModal #formGroup .contenu {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: inherit;
+  right: 0;
+  top: 6vw;
+  bottom: inherit;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 0.5vw;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translateY(0.8vw);
+          transform: translateY(0.8vw);
+  padding: 0.5vw;
+  z-index: 20;
+}
+
+.modalAddCom .modal #bodyModal #formGroup .contenu #content-liste {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0;
+  max-height: 20vw;
+  padding: 0.5vw;
+  overflow: auto;
+}
+
+.modalAddCom .modal #bodyModal #formGroup .contenu #content-liste .liste {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1vw;
+  border-bottom: 1px solid #F7F7F7;
+  border-radius: 0;
+  cursor: pointer;
+  padding: 0.8vw 1vw;
+  border-radius: 0.5vw;
+}
+
+.modalAddCom .modal #bodyModal #formGroup .contenu #content-liste .liste #image {
+  width: 3vw;
+  height: 3vw;
+}
+
+.modalAddCom .modal #bodyModal #formGroup .contenu #content-liste .liste #image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.modalAddCom .modal #bodyModal #formGroup .contenu #content-liste .liste #infos {
+  width: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.2vw;
+}
+
+.modalAddCom .modal #bodyModal #formGroup .contenu #content-liste .liste #infos #nom {
+  font-size: 0.9vw;
+  font-weight: 500;
+  font-family: "medium";
+  color: #303030;
+}
+
+.modalAddCom .modal #bodyModal #formGroup .contenu #content-liste .liste #infos #age {
+  font-weight: 500;
+  font-size: 11px;
+  color: #687d9c;
+}
+
+.modalAddCom .modal #bodyModal #formGroup .contenu #content-liste .liste:hover {
+  background-color: #F7F7F7;
+}
+
+.modalAddCom .modal #bodyModal #formGroup .contenu.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.modalAddCom .modal #footModal {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.5vw;
+  padding-top: 0.5vw;
+}
+
+.modalAddCom .modal #footModal .btn {
+  padding: 1.4vw 3vw;
+  margin: 0;
+  border: none;
+  border-radius: 0.6vw;
+  color: #303030;
+  font-size: 1vw;
+  background-color: #8E44AD;
+  cursor: pointer;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  width: 100%;
+  height: auto;
+  gap: 0.5vw;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .modalAddCom .modal #footModal .btn {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+.modalAddCom .modal #footModal .btn:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+}
+
+.modalAddCom .modal #footModal .btnCancel {
+  background-color: #F7F7F7;
+  color: #303030;
+}
+
+.modalAddCom .modal #footModal .btnConfirm {
+  background-color: #8E44AD;
+  color: #fff;
+}
+
+.modalAddCom.active .overlay {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.modalAddCom.active .modal {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+/*# sourceMappingURL=addCommande.css.map */

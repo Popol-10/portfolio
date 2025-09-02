@@ -1,0 +1,74 @@
+@import "../../library/layout/layout.scss";
+
+@include Police();
+
+@mixin header ($pd:4vw, $jc:space-between, $shadow:0 0 0.5rem rgba(0, 0, 0, 0.1)) {
+    @include size($ht:5vw);
+    @include flex($jc:$jc);
+    padding: $pd;
+    box-shadow: $shadow;
+    
+    @content;
+}
+
+@mixin logo($wd:15%, $jc:space-between, $gp:1vw, $pd:0.5vw, $type:"inline"){
+    @include size($wd:$wd);
+    padding: $pd;
+
+    @if($type == "inline") {
+        @include flex($jc:$jc, $gp:$gp);
+    }
+    
+    @if($type == "block"){
+        @include flexColumn($jc:$jc, $gp:$pg)
+    }
+
+    @content;
+}
+
+@mixin navBar($wd:auto, $gp:1vw, $jc:space-between){
+    .nav-h{
+        @include size($wd:$wd);
+        @include flex($fg:1);
+
+        .nav-content{
+            @include size($wd:auto);
+            @include flex($gp:$gp);
+            list-style-type: none;
+
+            .lien-nav{
+                @include size($wd:auto);
+                @include flex($jc:$jc);
+                .lien{
+                    @content;
+                }
+            }
+        }
+    }
+
+    .nav-v{
+        @include size($ht:auto);
+        @include flex($fg:1);
+
+        .nav-content{
+            @include size($ht:auto);
+            @include flexColumn($gp:$gp);
+            list-style-type: none;
+
+            .lien-nav{
+                @include size($ht:auto);
+                @include flex($jc:$jc);
+                .lien{
+                    @content;
+                }
+            }
+        }
+    }
+}
+
+@mixin actionNav($wd:20%, $jc:end, $gp:0.5vw){
+    @include size($wd:$wd);
+    @include flex($jc:$jc, $gp:$gp);
+
+    @content
+}

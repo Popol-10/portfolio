@@ -1,0 +1,65 @@
+@import "../library/layout/layout.scss";
+$shadow : 0 1px 5px $shadow1;
+
+@include Police();
+
+#dashboard{
+    @include size($wd:20%, $ht:100vh);
+    @include flexColumn($al:center, $gp:1.5vw);
+    // background-color: $loko3;
+    background-color: rgba(103, 2, 2, 0.763);
+    position: fixed;
+    #logo{
+        @include size($ht:7vw, $wd:80%);
+        @include flex($gp:0.5vw);
+        @include border($col:$loko7, $ps:bottom, $brad:0);
+        padding: 2vw 0;
+        .appLogo{
+            @include size($wd:3vw, $ht:3vw);
+            @include flex();
+            background-color: $gris;
+            border-radius: 50%;
+            i{
+                font-size: 1.5vw;
+                color: $loko1;
+            }
+            img{
+                @include image($ht:100%);
+            }
+        }
+        .contentTitre{
+            @include size($wd:auto);
+            @include flex($jc:start);
+            padding: 0 1vw;
+            #titre{
+                color: #ffffffda;
+                font-size: 1.6vw;
+                font-family: "medium";
+                span{
+                    &:nth-of-type(1){
+                        @include font($col:#fff, $size:2vw, $weight:500);
+                        font-family: "ExtraBold";
+                        #v{
+                            font-size: 2.8vw;
+                        }
+                    }
+                    &:nth-of-type(2){
+                        @include font($col:$loko1, $size:2vw, $weight:500);
+                        font-family: "ExtraBold";
+                    }
+                }
+            }
+        }
+    }
+    
+}
+main{
+    @include size($wd:80%);
+    @include flexColumn($gp:1.5vw);
+    background-color: $lavande;
+    flex-grow: 1;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    
+}
