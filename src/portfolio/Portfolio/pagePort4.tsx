@@ -40,7 +40,7 @@ const Port4=()=>{
                                 </div>
                                 <div className="dure">
                                     <h6>Durée d'éxécution</h6>
-                                    <h2>une semaine et quatre jour</ h2>
+                                    <h2>une semaine et deux jour</ h2>
                                 </div>
                                 <div></div>
                             </div>

@@ -7,7 +7,7 @@
     background-attachment: fixed;
     .contactd{
         @include size($wd:100vw,$ht:32vw);
-        background-color: rgba(0, 0, 0, 0.527);
+        background-color: rgba(0, 0, 0, 0.445);
         h2{
             padding-top: 1vw;
             font-size: 2.2vw;
@@ -23,33 +23,37 @@
             margin-left: 10vw;
             .contactd2{
                 @include size($wd:35vw,$ht:20vw);
-                background: #493030a6;
+                background: rgba(255, 255, 255, 0.541);
                 border-radius: 1vw;
                 
                 form{
                     @include size($wd:33vw,$ht:20vw);
-                    margin-left: 3.5vw;
+                    margin-left: 2vw;
                     padding: 1vw; 
                     @include flexColumn($jc:space-around);
                     input{
-                        width: 26vw;
-                        height: 2.5vw;
+                        width: 29vw;
+                        height: 3vw;
                         border-radius:.5vw;
-                        font-size: 1.2vw;
+                        font-size: 1.5vw;
+                        font-weight: bold;
+
                         border: none;
                         color: black;
-                        background: rgba(255, 255, 255, 0.582);
+                        // background: rgba(133, 75, 75, 0.555);
                         padding: 1vw;
                     }
                     textarea{
-                        width: 26vw;
+                        width: 29vw;
                         height: 7vw;
-                        font-size: 1.2vw;
-                        color: black ;
+                        font-size: 1.5vw;
+                        // color: black ;
+                        color: black;
+                        font-weight: bold;
                         border-radius: 1vw;
                         padding: 1vw;
                         border: none;
-                        background: rgba(255, 255, 255, 0.582);
+                        // background:rgba(133, 75, 75, 0.322);
 
                     }
                     button{
@@ -66,8 +70,9 @@
                     @include size($wd:30vw,$ht:16vw);
                     @include flexColumn($jc:space-around);
                     padding: 1vw;
+                    padding-top: 2vw;
                     .phone{
-                        width: 20vw;
+                        width: 27vw;
                         height: 4vw;
                         @include flex();
                         padding: 2vw;
@@ -80,12 +85,12 @@
                             }
                         }
                         .mail{
-                            width: 13vw;
+                            width: 18vw;
                             height: 3vw;
                             // background: #e49c9c;
                             h5{
                                 font-size: 1.5vw;
-                                color: rgb(5, 5, 5);
+                                color: black;
                             }
 
                         }

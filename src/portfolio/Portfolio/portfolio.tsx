@@ -16,9 +16,9 @@ const {ref, inView} = useInView({
                 <div className="portfolio1">
                     <motion.div 
                         className="port1"
-                        initial = {{x:-100,y:50,opacity:0}}
+                        initial = {{x:-50,y:50,opacity:0}}
                         animate={inView ? {x:0, y:0, opacity:1}:{}}
-                        transition={{duration:2}}
+                        transition={{duration:1.5}}
                         >
                         <img src="/imagePort/Capture d’écran 2025-09-02 081543.png" alt="" />
                         <h3>Portfolio</h3>
@@ -32,9 +32,9 @@ const {ref, inView} = useInView({
                     </motion.div>
                     <motion.div 
                         className="port1"
-                        initial = {{x:100,y:50,opacity:0}}
+                        initial = {{x:50,y:50,opacity:0}}
                         animate={inView ? {x:0,y:0, opacity:1}:{}}
-                        transition={{duration:2}}>
+                        transition={{duration:1.5}}>
                         <img src="/imagePort/Capture d’écran 2025-09-01 152056.png" alt="" />
                         <h3>Mi-Produits</h3>
                         <p>Une plateforme dédiée à la valorisation et à la vente de produits locaux à Madagasikara</p>
@@ -53,9 +53,9 @@ const {ref, inView} = useInView({
                     
                     <motion.div 
                         className="port1"
-                        initial = {{x:-100,y:-50,opacity:0}}
+                        initial = {{x:-50,y:-50,opacity:0}}
                         animate={inView ? {x:0,y:0, opacity:1}:{}}
-                        transition={{duration:2}}>
+                        transition={{duration:1.5}}>
                         <img src="/imagePort/Capture d’écran 2025-09-01 154823.png" alt="" />
                         <h3>Page d'accueil Mi-Produits</h3>
                         <p>C'est la vitrine principale du site Mi-Produits.</p>
@@ -68,9 +68,9 @@ const {ref, inView} = useInView({
                     </motion.div>
                     <motion.div 
                         className="port1"
-                        initial = {{x:100,y:-50,opacity:0}}
+                        initial = {{x:50,y:-50,opacity:0}}
                         animate={inView ? {x:0,y:0, opacity:1}:{}}
-                        transition={{duration:2}}>
+                        transition={{duration:1.5 }}>
                         <img src="/imagePort/Capture d’écran 2025-09-01 150243.png" alt="" />
                         <h3>Maquette automobile</h3>
                         <p>j'ai réalisé l'intégration web d'une maquette automobile en transformat un designe statique en un site fonctionnel et interactif.</p>

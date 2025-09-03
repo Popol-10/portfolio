@@ -43,6 +43,7 @@ const Section1 = () => {
 
   return (
     <section id="section1">
+      
       <div id="ContainerS">
           <motion.div
             initial={{ opacity: 0 }}
@@ -58,7 +59,20 @@ const Section1 = () => {
           {phrases[index].substring(0, subIndex)}
           <span className="cursor"></span>
         </h2>
+
+        <a 
+        href="" 
+        download="Mon_Cv.pdf" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="CV"
+      >
+        Télécharger mon CV
+      </a>
       </div>
+
+    
+    
 
       <div id="Container2">
         <h3>

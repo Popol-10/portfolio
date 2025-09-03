@@ -6,10 +6,15 @@
   @include size($wd: 100vw, $ht: 45vw);
   @include flex($jc: space-around);
   padding-top: 8vw;
+  // background: #000;
+  // position: relative;
+  
 
   #ContainerS {
     @include size($wd: 30vw, $ht: 35vw);
     padding: 1vw;
+    // background: #000;
+
 
     img {
       @include size($wd: 20vw, $ht: 20vw);
@@ -26,6 +31,23 @@
       color: rgb(133, 75, 75);
       text-align: center;
     }
+    .CV{
+      @include button($hover-bg:rgb(133, 75, 75));
+      background:linear-gradient(white, rgb(133, 75, 75));
+      @include size($wd:17vw,$ht:3.5vw);
+      color: black; 
+      font-weight: bold;
+      font-size: 1.5vw;
+      border: none;
+      padding: 1vw;
+      margin-left: 5vw;
+      margin-top: 2vw;
+      
+      text-decoration: none;
+      &:hover{
+        color: rgb(138, 50, 50);
+      }
+  }
 
     #devT {
       font-size: 2vw;
@@ -74,14 +96,23 @@
     height: auto;
     padding-top: 5vw;
     @include flexColumn($jc:center, $ac:center);
+    // .CV{
+    //   top: 20vw;
+    //   right: -30vw;
+    //   width: 25vw;
+    //   height: 5vw;
+    //   font-size: 2vw;
+    //   transform: rotate(-90deg);
+    // }
 
-    #ContainerS,
-    #Container2 {
-      width: 95vw;
-      height: auto;
-    }
+    // #ContainerS,
+    // #Container2 {
+      
+    // }
 
     #ContainerS {
+      width: 95vw;
+      height: auto;
       img {
         width: 50vw;
         height: 50vw;
@@ -93,9 +124,17 @@
       #devT {
         font-size: 4vw;
       }
+      .CV{
+        font-size: 2vw;
+        width: 25vw;
+        height: 5vw;
+        margin: auto;
+      }
     }
 
     #Container2 {
+      width: 95vw;
+      height: auto;
       h3 {
         font-size: 3.5vw;
       }

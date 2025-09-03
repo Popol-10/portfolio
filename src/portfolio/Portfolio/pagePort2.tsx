@@ -29,7 +29,7 @@ const Port2=()=>{
                         <div className="apropos">
                             <h3>A propos du projet</h3>
                             <p>Mi-Produits est une solution complète de vente et des achats,développée par React.JS et TypeScript pour le frontend et Sass pour le style, côté backend j'utilise NestJs , Mysql pour la base de donnée et j'utilise aussi l'API Swagger. <br/>
-                            ce site permet aux vendeur de publier facilement leurs articles, qu'il s'agisse de produits agricoles,artisanaux,  ou autres richesse locales.Les Client peuvents parcourir les offres, passer des commandes ou faire des réservation en toute simplicité.</p>
+                            ce site permet aux vendeur de publier facilement leurs articles, qu'il s'agisse de produits agricoles,artisanaux,  ou autres richesse locales. Les Client peuvents parcourir les offres, passer des commandes ou faire des réservation en toute simplicité.</p>  
                         </div>
                         <div className="fonctionalite">
                             <h3>Fonctionalité</h3>

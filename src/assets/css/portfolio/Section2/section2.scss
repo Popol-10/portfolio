@@ -14,7 +14,7 @@
   }
 
   #contenaire-Compet {
-    @include size($wd: 70vw, $ht: auto);
+    @include size($wd:70vw, $ht: auto);
     background: linear-gradient(to bottom,rgba(255, 0, 0, 0.158),rgba(0, 0, 0, 0.26));
     margin: 2vw auto;
     border-radius: 2vw;
@@ -53,6 +53,8 @@
           .html{
             width:8vw;
             height:6vw;
+            margin-top: 1.1vw;
+            
           }
           .bootstrap{
             width: 8vw;
@@ -117,7 +119,7 @@
             .html{
                 width: 14vw;
                 height: auto;
-                margin: 0 auto;
+                // margin: 0 auto;
             }
             .bootstrap{
                 width: 14vw;

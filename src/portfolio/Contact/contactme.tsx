@@ -44,7 +44,7 @@ const Contact =()=>{
         <>
             <section id="Contact" ref={ref}>
                 <div className="contactd">
-                    <h2>Contact moi</h2>
+                    <h2>Contactez-moi</h2>
                     <div id="contactd2">
                         <motion.div 
                             className="contactd2"

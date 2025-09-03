@@ -22,7 +22,7 @@ const Port1=()=>{
                             </svg>
                         </Link>
                         <h2>Portfolio</h2>
-                        <p>Une application web qui contient touts mes information : expériences, compétence...</p>
+                        <p>Une application web qui contient touts mes travails, mes parcours, mes information(expériences, compétence...)</p>
                     </motion.div>
                     <div className="img">
                         <img src="/imagePort/Capture d’écran 2025-09-02 081543.png" alt="" />
