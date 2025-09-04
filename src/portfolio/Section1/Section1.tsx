@@ -13,7 +13,7 @@ const phrases = [
 
 const Section1 = () => {
   const img = "/imagePort/popol.jpg";
-  const Cv = "../../../cvdeveloppeur.pdf"
+  const Cv = "../../../cvdev2.pdf"
   // states pour le typewriter
   const [index, setIndex] = useState(0);       // index de la phrase actuelle
   const [subIndex, setSubIndex] = useState(0); // index de la lettre
