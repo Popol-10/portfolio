@@ -96,19 +96,7 @@
     height: auto;
     padding-top: 5vw;
     @include flexColumn($jc:center, $ac:center);
-    // .CV{
-    //   top: 20vw;
-    //   right: -30vw;
-    //   width: 25vw;
-    //   height: 5vw;
-    //   font-size: 2vw;
-    //   transform: rotate(-90deg);
-    // }
-
-    // #ContainerS,
-    // #Container2 {
-      
-    // }
+    
 
     #ContainerS {
       width: 95vw;
@@ -124,6 +112,7 @@
       #devT {
         font-size: 4vw;
       }
+
       .CV{
         font-size: 2vw;
         width: 25vw;

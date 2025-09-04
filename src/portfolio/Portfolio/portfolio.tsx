@@ -29,6 +29,7 @@ const {ref, inView} = useInView({
                             <h4>Typescript</h4>
                         </div>
                         <Link to={"/port1"} className="button"> Voir le detail <img src="/imageSlide/right_13472507.png" alt="" /></Link>
+                          
                     </motion.div>
                     <motion.div 
                         className="port1"

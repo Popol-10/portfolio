@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import "../../assets/css/portfolio/Section1/section1.scss";
+// import "../../../cvdeveloppeur.pdf";
 // import "../../../imagePort/popol.jpg";
 import { motion } from "framer-motion";
 const phrases = [
@@ -12,7 +13,7 @@ const phrases = [
 
 const Section1 = () => {
   const img = "/imagePort/popol.jpg";
-
+  const Cv = "../../../cvdeveloppeur.pdf"
   // states pour le typewriter
   const [index, setIndex] = useState(0);       // index de la phrase actuelle
   const [subIndex, setSubIndex] = useState(0); // index de la lettre
@@ -61,7 +62,7 @@ const Section1 = () => {
         </h2>
 
         <a 
-        href="" 
+        href={Cv} 
         download="Mon_Cv.pdf" 
         target="_blank" 
         rel="noopener noreferrer" 
